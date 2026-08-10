@@ -28,24 +28,24 @@ export default function Calculator({ exerciseName, ratios }) {
   }, [bw, ratios, gender]);
 
   return (
-    <div className="rounded-lg border border-line bg-panel p-6 sm:p-8">
-      <div className="mb-6 flex items-center justify-between">
-        <h2 className="font-display text-2xl uppercase tracking-tight text-bone">
+    <div className="border border-rule bg-card">
+      <div className="flex items-center justify-between border-b border-rule px-6 py-4 sm:px-8">
+        <h2 className="font-display text-xl italic text-ink">
           {exerciseName} Calculator
         </h2>
-        <div className="flex gap-1 rounded border border-line p-1 text-xs">
+        <div className="flex gap-px overflow-hidden border border-rule font-mono text-xs">
           <button
             onClick={() => setUnit("lb")}
-            className={`rounded px-2 py-1 font-mono ${
-              unit === "lb" ? "bg-flare text-ink" : "text-mute"
+            className={`px-3 py-1.5 ${
+              unit === "lb" ? "bg-ink text-card" : "text-mute"
             }`}
           >
             LB
           </button>
           <button
             onClick={() => setUnit("kg")}
-            className={`rounded px-2 py-1 font-mono ${
-              unit === "kg" ? "bg-flare text-ink" : "text-mute"
+            className={`px-3 py-1.5 ${
+              unit === "kg" ? "bg-ink text-card" : "text-mute"
             }`}
           >
             KG
@@ -53,100 +53,103 @@ export default function Calculator({ exerciseName, ratios }) {
         </div>
       </div>
 
-      <div className="mb-6 flex gap-2">
-        <button
-          onClick={() => setGender("men")}
-          className={`flex-1 rounded border py-2 text-sm font-medium ${
-            gender === "men"
-              ? "border-flare bg-flare/10 text-flare"
-              : "border-line text-mute"
-          }`}
-        >
-          Men's standards
-        </button>
-        <button
-          onClick={() => setGender("women")}
-          className={`flex-1 rounded border py-2 text-sm font-medium ${
-            gender === "women"
-              ? "border-flare bg-flare/10 text-flare"
-              : "border-line text-mute"
-          }`}
-        >
-          Women's standards
-        </button>
-      </div>
+      <div className="px-6 pt-6 sm:px-8">
+        <div className="mb-6 flex border border-rule text-sm">
+          <button
+            onClick={() => setGender("men")}
+            className={`flex-1 py-2.5 ${
+              gender === "men"
+                ? "bg-ink text-card"
+                : "text-mute hover:text-ink"
+            }`}
+          >
+            Men's standards
+          </button>
+          <button
+            onClick={() => setGender("women")}
+            className={`flex-1 border-l border-rule py-2.5 ${
+              gender === "women"
+                ? "bg-ink text-card"
+                : "text-mute hover:text-ink"
+            }`}
+          >
+            Women's standards
+          </button>
+        </div>
 
-      <div className="grid grid-cols-3 gap-3">
-        <label className="block">
-          <span className="mb-1 block text-xs uppercase tracking-wide text-mute">
-            Bodyweight ({unit})
-          </span>
-          <input
-            type="number"
-            inputMode="decimal"
-            value={bodyweight}
-            onChange={(e) => setBodyweight(e.target.value)}
-            placeholder="180"
-            className="w-full rounded border border-line bg-ink px-3 py-2 font-mono text-bone outline-none focus:border-flare"
-          />
-        </label>
-        <label className="block">
-          <span className="mb-1 block text-xs uppercase tracking-wide text-mute">
-            Weight lifted ({unit})
-          </span>
-          <input
-            type="number"
-            inputMode="decimal"
-            value={weight}
-            onChange={(e) => setWeight(e.target.value)}
-            placeholder="225"
-            className="w-full rounded border border-line bg-ink px-3 py-2 font-mono text-bone outline-none focus:border-flare"
-          />
-        </label>
-        <label className="block">
-          <span className="mb-1 block text-xs uppercase tracking-wide text-mute">
-            Reps done
-          </span>
-          <input
-            type="number"
-            inputMode="numeric"
-            value={reps}
-            onChange={(e) => setReps(e.target.value)}
-            placeholder="5"
-            className="w-full rounded border border-line bg-ink px-3 py-2 font-mono text-bone outline-none focus:border-flare"
-          />
-        </label>
+        <div className="grid grid-cols-3 gap-3">
+          <label className="block">
+            <span className="mb-1.5 block font-mono text-[11px] uppercase tracking-wide text-mute">
+              Bodyweight
+            </span>
+            <input
+              type="number"
+              inputMode="decimal"
+              value={bodyweight}
+              onChange={(e) => setBodyweight(e.target.value)}
+              placeholder="180"
+              className="w-full border border-rule bg-paper px-3 py-2.5 font-mono text-ink outline-none focus:border-brass"
+            />
+          </label>
+          <label className="block">
+            <span className="mb-1.5 block font-mono text-[11px] uppercase tracking-wide text-mute">
+              Weight lifted
+            </span>
+            <input
+              type="number"
+              inputMode="decimal"
+              value={weight}
+              onChange={(e) => setWeight(e.target.value)}
+              placeholder="225"
+              className="w-full border border-rule bg-paper px-3 py-2.5 font-mono text-ink outline-none focus:border-brass"
+            />
+          </label>
+          <label className="block">
+            <span className="mb-1.5 block font-mono text-[11px] uppercase tracking-wide text-mute">
+              Reps
+            </span>
+            <input
+              type="number"
+              inputMode="numeric"
+              value={reps}
+              onChange={(e) => setReps(e.target.value)}
+              placeholder="5"
+              className="w-full border border-rule bg-paper px-3 py-2.5 font-mono text-ink outline-none focus:border-brass"
+            />
+          </label>
+        </div>
       </div>
 
       {estimated1RM && (
-        <div className="mt-6 rounded border border-flare/30 bg-flare/5 p-5">
-          <div className="text-xs uppercase tracking-wide text-mute">
-            Estimated 1-rep max
+        <div className="mx-6 mt-6 border-t border-rule pt-6 sm:mx-8">
+          <div className="font-mono text-[11px] uppercase tracking-wide text-mute">
+            Estimated one-rep max
           </div>
-          <div className="font-display text-4xl text-bone">
+          <div className="font-display text-6xl italic text-ink">
             {estimated1RM}
-            <span className="ml-1 text-lg text-mute">{unit}</span>
+            <span className="ml-2 font-body text-xl not-italic text-mute">
+              {unit}
+            </span>
           </div>
 
           {tierInfo && (
-            <div className="mt-3 border-t border-line pt-3 text-sm">
-              <div className="text-bone">
-                That puts you at{" "}
-                <span className="font-semibold text-flare">
-                  {tierInfo.tier}
-                </span>{" "}
-                for your bodyweight.
-              </div>
+            <div className="mt-3 text-sm text-ink">
+              That puts you at{" "}
+              <span className="border-b-2 border-brass font-semibold">
+                {tierInfo.tier}
+              </span>{" "}
+              for your bodyweight.
               {tierInfo.nextTier && (
-                <div className="mt-1 text-mute">
+                <span className="text-mute">
+                  {" "}
                   {tierInfo.nextTierWeight}
                   {unit} gets you to {tierInfo.nextTier}.
-                </div>
+                </span>
               )}
             </div>
           )}
           {!bw && (
-            <div className="mt-3 border-t border-line pt-3 text-sm text-mute">
+            <div className="mt-3 text-sm text-mute">
               Add your bodyweight above to see your strength tier.
             </div>
           )}
@@ -154,24 +157,30 @@ export default function Calculator({ exerciseName, ratios }) {
       )}
 
       {tierTable && (
-        <div className="mt-6">
-          <div className="mb-2 text-xs uppercase tracking-wide text-mute">
+        <div className="mx-6 mb-6 mt-6 sm:mx-8">
+          <div className="mb-2 font-mono text-[11px] uppercase tracking-wide text-mute">
             Full tier breakdown at {bw}
             {unit} bodyweight
           </div>
-          <div className="overflow-hidden rounded border border-line">
+          <div className="border border-rule">
             {tierTable.map((row, i) => (
               <div
                 key={row.label}
-                className={`flex items-center justify-between px-4 py-2 text-sm ${
-                  i % 2 === 0 ? "bg-ink" : "bg-panel"
+                className={`flex items-center justify-between px-4 py-2.5 text-sm ${
+                  i !== 0 ? "border-t border-rule" : ""
                 } ${
-                  tierInfo?.tier === row.label
-                    ? "ring-1 ring-inset ring-flare"
-                    : ""
+                  tierInfo?.tier === row.label ? "bg-brass/10" : ""
                 }`}
               >
-                <span className="text-bone">{row.label}</span>
+                <span
+                  className={
+                    tierInfo?.tier === row.label
+                      ? "font-semibold text-ink"
+                      : "text-ink"
+                  }
+                >
+                  {row.label}
+                </span>
                 <span className="font-mono text-mute">
                   {row.weight} {unit}
                 </span>
