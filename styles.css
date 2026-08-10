@@ -8,8 +8,8 @@
 
 html,
 body {
-  background-color: #ede7d8;
-  color: #1c1a15;
+  background-color: #fdf1e5;
+  color: #241c18;
 }
 
 body {
@@ -21,7 +21,7 @@ body {
 }
 
 :focus-visible {
-  outline: 2px solid #7d5b23;
+  outline: 2px solid #ff5a2e;
   outline-offset: 2px;
 }
 
@@ -32,8 +32,4 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 input[type="number"] {
   -moz-appearance: textfield;
-}
-
-.rule {
-  border-color: #cbc0a0;
 }

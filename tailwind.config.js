@@ -8,19 +8,21 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        paper: "#EDE7D8",
-        card: "#F6F2E7",
-        ink: "#1C1A15",
-        rule: "#CBC0A0",
-        mute: "#6E6650",
-        brass: "#7D5B23",
-        brass2: "#A3792F",
-        forest: "#2B4436",
+        peach: "#FDF1E5",
+        card: "#FFFFFF",
+        ink: "#241C18",
+        mute: "#948B82",
+        line: "#F0E1D2",
+        flare: "#FF5A2E",
+        flare2: "#FFB130",
       },
       fontFamily: {
-        display: ["var(--font-display)", "serif"],
+        display: ["var(--font-display)", "sans-serif"],
         body: ["var(--font-body)", "sans-serif"],
         mono: ["var(--font-mono)", "monospace"],
+      },
+      borderRadius: {
+        card: "1.25rem",
       },
     },
   },
