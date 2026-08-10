@@ -1,6 +1,6 @@
 import { getAllSlugs } from "../data";
 
-const SITE_URL = "https://repmax.vercel.app"; // update once you have a real domain
+const SITE_URL = "https://repmax-app.vercel.app"; // update once you have a real domain
 
 function generateSitemap(slugs) {
   const urls = ["", ...slugs]
