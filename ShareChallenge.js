@@ -1,8 +1,8 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useRef } from "react";
 import { lbToKg, kgToLb } from "./calc";
 
 const SITE_NAME = "RepMax";
-const SITE_DOMAIN = "repmax.vercel.app"; // update once on a final domain
+const SITE_DOMAIN = "repmax-app.vercel.app"; // update once on a final domain
 
 function roundRect(ctx, x, y, w, h, r) {
   ctx.beginPath();
@@ -24,7 +24,6 @@ function drawCard({ style, exerciseName, statValue, unit, tierLabel, ratioText }
   const isDark = style === "dark";
   const pad = 72;
 
-  // Background
   if (isDark) {
     ctx.fillStyle = "#201810";
     ctx.fillRect(0, 0, size, size);
@@ -41,13 +40,11 @@ function drawCard({ style, exerciseName, statValue, unit, tierLabel, ratioText }
     ctx.fillRect(0, 0, size, size);
   }
 
-  // Exercise tag
   ctx.font = "600 30px monospace";
   ctx.fillStyle = isDark ? "#FFB130" : "#A3792F";
   ctx.textBaseline = "top";
   ctx.fillText(exerciseName.toUpperCase(), pad, pad);
 
-  // Tier badge
   ctx.font = "800 30px sans-serif";
   const badgeText = tierLabel;
   const badgeW = ctx.measureText(badgeText).width + 56;
@@ -69,7 +66,6 @@ function drawCard({ style, exerciseName, statValue, unit, tierLabel, ratioText }
   ctx.fillText(badgeText, badgeX + badgeW / 2, badgeY + 13);
   ctx.textAlign = "left";
 
-  // Big stat
   const statY = size * 0.42;
   if (isDark) {
     const statGrad = ctx.createLinearGradient(pad, 0, pad + 500, 0);
@@ -87,12 +83,10 @@ function drawCard({ style, exerciseName, statValue, unit, tierLabel, ratioText }
   ctx.fillStyle = "#948B82";
   ctx.fillText(unit, pad + statWidth + 16, statY + 110);
 
-  // Ratio subtext
   ctx.font = "500 34px sans-serif";
   ctx.fillStyle = isDark ? "#EFE7DA" : "#6b6458";
   ctx.fillText(ratioText, pad, statY + 190);
 
-  // Footer
   const footerY = size - pad - 50;
   ctx.strokeStyle = isDark ? "rgba(255,255,255,0.12)" : "rgba(0,0,0,0.1)";
   ctx.lineWidth = 2;
@@ -128,6 +122,26 @@ function drawCard({ style, exerciseName, statValue, unit, tierLabel, ratioText }
   return canvas;
 }
 
+// Small celebratory burst, pure CSS/DOM, no external library.
+function ConfettiBurst() {
+  const pieces = Array.from({ length: 14 });
+  return (
+    <div className="pointer-events-none absolute inset-0 overflow-hidden">
+      {pieces.map((_, i) => (
+        <span
+          key={i}
+          className="confetti-piece"
+          style={{
+            left: `${8 + Math.random() * 84}%`,
+            animationDelay: `${Math.random() * 0.15}s`,
+            background: i % 2 === 0 ? "#FF5A2E" : "#FFB130",
+          }}
+        />
+      ))}
+    </div>
+  );
+}
+
 export default function ShareChallenge({
   exerciseName,
   slug,
@@ -135,10 +149,14 @@ export default function ShareChallenge({
   unit,
   tierLabel,
   ratio,
-  challenge, // { value, unit, name } if this page was opened via a challenge link
+  challenge,
 }) {
   const [cardStyle, setCardStyle] = useState("peach");
-  const [linkCopied, setLinkCopied] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [nameInput, setNameInput] = useState("");
+  const [linkReady, setLinkReady] = useState(null); // { link, copied }
+  const [shareStatus, setShareStatus] = useState(null); // 'saved' | 'shared' | null
+  const linkInputRef = useRef(null);
 
   const ratioText = ratio ? `That's ${ratio.toFixed(2)}x bodyweight` : "";
 
@@ -181,8 +199,9 @@ export default function ShareChallenge({
             title: `My ${exerciseName} result on RepMax`,
             text: `${estimated1RM}${unit} on ${exerciseName} — ${tierLabel} tier.`,
           });
+          setShareStatus("shared");
         } catch (err) {
-          // user cancelled the share sheet — no action needed
+          // user cancelled the native share sheet — not an error
         }
       } else {
         const url = URL.createObjectURL(blob);
@@ -191,13 +210,22 @@ export default function ShareChallenge({
         a.download = `${slug}-repmax.png`;
         a.click();
         URL.revokeObjectURL(url);
+        setShareStatus("saved");
       }
+      setTimeout(() => setShareStatus(null), 3000);
     }, "image/png");
   }
 
-  async function handleChallenge() {
-    const name = window.prompt("Your name (shown to whoever you challenge):", "");
-    const displayName = name && name.trim() ? name.trim() : "A friend";
+  function openChallengeModal() {
+    setNameInput("");
+    setLinkReady(null);
+    setModalOpen(true);
+  }
+
+  // This runs directly inside a click handler (the "Create Link" button),
+  // so clipboard permission is granted — no intervening blocking prompt.
+  async function createAndCopyLink() {
+    const displayName = nameInput.trim() || "A friend";
 
     const url = new URL(window.location.href);
     url.search = "";
@@ -205,39 +233,55 @@ export default function ShareChallenge({
     url.searchParams.set("cu", unit);
     url.searchParams.set("cn", displayName);
     const link = url.toString();
-
     const text = `I just hit ${estimated1RM}${unit} on ${exerciseName} (${tierLabel}) on RepMax. Think you can beat it?`;
 
+    // Try native share first — best experience on mobile.
     if (navigator.share) {
       try {
         await navigator.share({ title: "RepMax Challenge", text, url: link });
+        setModalOpen(false);
         return;
       } catch (err) {
-        // user cancelled — fall through to clipboard copy
+        // fall through to clipboard/manual copy below
       }
     }
 
+    let copied = false;
     try {
       await navigator.clipboard.writeText(`${text} ${link}`);
-      setLinkCopied(true);
-      setTimeout(() => setLinkCopied(false), 2500);
+      copied = true;
     } catch (err) {
-      window.prompt("Copy this link to challenge a friend:", link);
+      copied = false;
+    }
+
+    setLinkReady({ link, text, copied });
+  }
+
+  function manualCopyFallback() {
+    if (linkInputRef.current) {
+      linkInputRef.current.select();
+      linkInputRef.current.setSelectionRange(0, 99999);
+      try {
+        document.execCommand("copy");
+        setLinkReady((prev) => ({ ...prev, copied: true }));
+      } catch (err) {
+        // no-op — text is at least selected for the person to copy manually
+      }
     }
   }
 
   if (!estimated1RM) return null;
 
   return (
-    <div className="mt-4">
+    <div className="relative mt-4">
+      {comparison && comparison.won && <ConfettiBurst />}
+
       {comparison && (
         <div
-          className={`mb-4 rounded-2xl p-4 ${
+          className={`mb-4 animate-fade-in-up rounded-2xl border p-4 ${
             comparison.won
-              ? "bg-green-50 border border-green-200"
-              : comparison.tied
-              ? "bg-flare/10 border border-flare/30"
-              : "bg-flare/10 border border-flare/30"
+              ? "border-green-200 bg-green-50"
+              : "border-flare/30 bg-flare/10"
           }`}
         >
           {comparison.tied ? (
@@ -266,21 +310,21 @@ export default function ShareChallenge({
       <div className="flex flex-wrap gap-2.5">
         <button
           onClick={handleShare}
-          className="flex flex-1 items-center justify-center gap-2 rounded-2xl bg-ink px-4 py-3 text-sm font-semibold text-white"
+          className="flex flex-1 items-center justify-center gap-2 rounded-2xl bg-ink px-4 py-3 text-sm font-semibold text-white transition-transform active:scale-95"
         >
           ⤴ Share Result
         </button>
         <button
-          onClick={handleChallenge}
-          className="flex flex-1 items-center justify-center gap-2 rounded-2xl border-2 border-flare px-4 py-3 text-sm font-semibold text-flare"
+          onClick={openChallengeModal}
+          className="flex flex-1 items-center justify-center gap-2 rounded-2xl border-2 border-flare px-4 py-3 text-sm font-semibold text-flare transition-transform active:scale-95"
         >
           ⚡ {comparison ? `Challenge ${comparison.name} Back` : "Challenge a Friend"}
         </button>
       </div>
 
-      {linkCopied && (
-        <div className="mt-2 text-center text-xs font-medium text-flare">
-          Link copied to clipboard!
+      {shareStatus && (
+        <div className="mt-2 animate-fade-in-up text-center text-xs font-medium text-flare">
+          {shareStatus === "saved" ? "Image saved!" : "Shared!"}
         </div>
       )}
 
@@ -288,19 +332,97 @@ export default function ShareChallenge({
         <span>Card style:</span>
         <button
           onClick={() => setCardStyle("peach")}
-          className={`h-5 w-5 rounded border-2 bg-[#FDF1E5] ${
+          className={`h-5 w-5 rounded border-2 bg-[#FDF1E5] transition-transform active:scale-90 ${
             cardStyle === "peach" ? "border-flare" : "border-transparent"
           }`}
           aria-label="Peach card style"
         />
         <button
           onClick={() => setCardStyle("dark")}
-          className={`h-5 w-5 rounded border-2 bg-[#241C18] ${
+          className={`h-5 w-5 rounded border-2 bg-[#241C18] transition-transform active:scale-90 ${
             cardStyle === "dark" ? "border-flare" : "border-transparent"
           }`}
           aria-label="Dark card style"
         />
       </div>
+
+      {/* Challenge modal */}
+      {modalOpen && (
+        <div className="fixed inset-0 z-50 flex items-end justify-center bg-black/40 p-0 backdrop-blur-sm sm:items-center sm:p-4">
+          <div className="w-full max-w-sm animate-slide-up rounded-t-3xl bg-card p-6 shadow-xl sm:rounded-3xl">
+            {!linkReady ? (
+              <>
+                <div className="mb-1 font-display text-lg font-bold text-ink">
+                  Challenge a friend
+                </div>
+                <div className="mb-4 text-sm text-mute">
+                  They'll see your {exerciseName.toLowerCase()} number and a
+                  link to beat it.
+                </div>
+                <label className="block">
+                  <span className="mb-1.5 block text-xs font-medium text-mute">
+                    Your name
+                  </span>
+                  <input
+                    autoFocus
+                    type="text"
+                    value={nameInput}
+                    onChange={(e) => setNameInput(e.target.value)}
+                    placeholder="Alex"
+                    maxLength={20}
+                    className="w-full rounded-2xl border border-line bg-peach px-4 py-3 text-ink outline-none focus:border-flare"
+                  />
+                </label>
+                <div className="mt-5 flex gap-2.5">
+                  <button
+                    onClick={() => setModalOpen(false)}
+                    className="flex-1 rounded-2xl border border-line py-3 text-sm font-semibold text-mute transition-transform active:scale-95"
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    onClick={createAndCopyLink}
+                    className="flex-1 rounded-2xl bg-flare py-3 text-sm font-semibold text-white transition-transform active:scale-95"
+                  >
+                    Create Link
+                  </button>
+                </div>
+              </>
+            ) : (
+              <>
+                <div className="mb-1 font-display text-lg font-bold text-ink">
+                  {linkReady.copied ? "Copied!" : "Your challenge link"}
+                </div>
+                <div className="mb-4 text-sm text-mute">
+                  {linkReady.copied
+                    ? "Paste it anywhere to send the challenge."
+                    : "Tap copy, or select the text manually."}
+                </div>
+                <div className="flex items-center gap-2 rounded-2xl border border-line bg-peach px-3 py-2.5">
+                  <input
+                    ref={linkInputRef}
+                    readOnly
+                    value={linkReady.link}
+                    className="flex-1 truncate bg-transparent font-mono text-xs text-ink outline-none"
+                  />
+                  <button
+                    onClick={manualCopyFallback}
+                    className="flex-shrink-0 rounded-xl bg-ink px-3 py-1.5 text-xs font-semibold text-white transition-transform active:scale-95"
+                  >
+                    Copy
+                  </button>
+                </div>
+                <button
+                  onClick={() => setModalOpen(false)}
+                  className="mt-5 w-full rounded-2xl bg-flare py-3 text-sm font-semibold text-white transition-transform active:scale-95"
+                >
+                  Done
+                </button>
+              </>
+            )}
+          </div>
+        </div>
+      )}
     </div>
   );
 }

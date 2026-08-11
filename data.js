@@ -22,32 +22,33 @@ const exercises = [
     faqs: [
       {
         q: "How much should I hip thrust?",
-        a: "As a rough floor, being able to hip thrust your own bodyweight for a clean rep puts you past the beginner stage. Most people who train glutes with any consistency end up in the 1.25–1.75x bodyweight range within a year or two. Use the calculator above with your own bodyweight and working set — it'll give you a tighter number than any flat chart.",
+        a: "Bodyweight for a clean rep is your first real marker. Past that, most consistent lifters settle into 1.25–1.75x bodyweight within a year or two. Punch your own numbers into the calculator above rather than trusting a flat rule.",
       },
       {
         q: "Is my hip thrust good?",
-        a: "Compare it to your squat and deadlift, not to a stranger's numbers. If your hip thrust is noticeably lower than 1.5x your squat, your glutes are probably the limiting factor in both lifts and worth prioritizing for a while.",
+        a: "Depends what you're comparing it to. Way lower than 1.5x your squat? Your glutes are probably the weak link in both lifts.",
       },
       {
         q: "What's a good hip thrust for beginners?",
-        a: "If you're new to the movement, focus on hitting bodyweight for 8 clean reps before adding much load. Most beginners can add weight quickly here compared to squats or deadlifts, since the range of motion is shorter and there's less to coordinate.",
+        a: "Bodyweight for 8 clean reps, no load. You'll add weight fast here compared to squats — shorter range, less to coordinate.",
       },
       {
         q: "Hip thrust vs glute bridge — what's the difference?",
-        a: "Glute bridge is the floor version with a shorter range of motion and less loading potential. Hip thrust, with your upper back elevated on a bench, lets you go through a full range and load it much heavier. If you're maxing out glute bridge weight, hip thrust is the natural next step.",
+        a: "Glute bridge is the floor version, short range, capped loading. Hip thrust puts your upper back on a bench and lets you go heavy through a full range. If you've maxed out bridge weight, thrust is next.",
       },
       {
         q: "How much should I single leg hip thrust?",
-        a: "Expect roughly 40-50% of your two-leg hip thrust weight per side. It's a stability-heavy variation, so don't be surprised if the number feels low relative to your barbell number at first.",
+        a: "Roughly 40-50% of your two-leg number, per side. It's a stability move first — don't be surprised if the number humbles you.",
       },
       {
         q: "How do I improve my hip thrust?",
-        a: "Pause for a full second at the top on your working sets — it's tempting to bounce through lockout once the weight gets heavy, and that's where most of the false progress comes from. Also check your foot placement; too far forward or back changes the leverage more than people expect.",
+        a: "Pause a full second at the top. Bouncing through lockout once it gets heavy is where most of the 'progress' on this lift is fake. Foot placement matters more than people expect too.",
       },
       {
         q: "What's the average hip thrust for women?",
-        a: "Using the calculator above with the women's toggle gives a more accurate number than a flat average, since bodyweight ratio matters more here than almost any other lift — hip thrust standards scale differently by gender than something like bench press.",
+        a: "Use the women's toggle above with your real bodyweight — flat averages don't hold up well on this particular lift, ratios shift more than most exercises.",
       },
+
     ],
     relatedSlugs: ["hack-squat", "back-squat"],
   },
@@ -70,28 +71,29 @@ const exercises = [
     faqs: [
       {
         q: "How much should I hack squat?",
-        a: "This one varies a lot by machine — sled weight alone can differ by 50+ lbs between gyms, so don't panic if your number looks low on a heavy sled. Use total weight moved (sled + plates) and check your ratio against your own bodyweight rather than comparing raw numbers with someone at a different gym.",
+        a: "Sled weight alone can swing 50+ lbs between gyms, so don't panic at a low number on a heavy sled. Total weight moved — sled plus plates — is what matters.",
       },
       {
         q: "Is hack squat harder than back squat?",
-        a: "Not harder exactly, but it isolates the quads more directly since your back and core aren't stabilizing a bar. Most lifters can hack squat noticeably more than they back squat once they're used to the machine.",
+        a: "Not harder, just more isolated. No bar to stabilize means most people move noticeably more weight here than on back squat.",
       },
       {
         q: "How much does the hack squat sled weigh?",
-        a: "Anywhere from 30 to over 100 lbs depending on the machine — check the base plate on yours, it's usually stamped somewhere on the frame. This matters a lot if you're tracking progress across different gyms.",
+        a: "Anywhere from 30 to over 100 lbs. Check the base plate — it's usually stamped somewhere on the frame.",
       },
       {
         q: "Hack squat vs leg press, which is better?",
-        a: "Hack squat keeps you more upright and involves more knee-dominant mechanics, closer to a real squat pattern. Leg press lets you go heavier with less technical demand but trains a slightly different angle. Neither replaces the other — a lot of serious lifters use both.",
+        a: "Different angles, different goals. Hack squat keeps you upright, closer to a real squat pattern; leg press lets you go heavier with less technical demand. A lot of serious lifters run both.",
       },
       {
         q: "What's a good hack squat weight for beginners?",
-        a: "If you're new to the machine, start light and nail your depth and foot placement before adding weight — hack squat lets you hide bad habits behind heavy loading more easily than a free-weight squat would.",
+        a: "Nail depth and foot placement first. The machine hides bad habits behind heavy loading more easily than free weights do.",
       },
       {
         q: "Can I hack squat with a barbell?",
-        a: "Yes, the barbell hack squat is an older variation, bar held behind your legs rather than on a machine. It's a different (and harder) movement pattern than the machine version, and the weights aren't directly comparable.",
+        a: "Yes — older variation, bar held behind your legs. Harder movement, and the numbers won't transfer to the machine version.",
       },
+
     ],
     relatedSlugs: ["back-squat", "hip-thrust"],
   },
@@ -114,28 +116,29 @@ const exercises = [
     faqs: [
       {
         q: "How much should I squat?",
-        a: "Bodyweight for a clean, full-depth rep is a reasonable first target if you're new to barbell training. Past that, 1.25x bodyweight is a common marker of a year or two of consistent training, and 1.75x-plus starts to separate people who train squats specifically from people who just train legs generally.",
+        a: "Bodyweight, full depth, one clean rep — that's a fair first target for a new lifter. 1.25x is a year-or-two marker. 1.75x-plus and you're clearly training squats specifically, not just training legs.",
       },
       {
         q: "What's a good squat for my bodyweight?",
-        a: "Use the calculator above rather than a flat number — ratio to bodyweight matters more than raw weight, especially comparing a 140lb lifter to a 220lb lifter. A 300lb squat means something very different depending on who's under the bar.",
+        a: "Ratio beats raw weight. A 300lb squat means something completely different for a 140lb lifter than a 220lb one — use the calculator above instead of a flat number.",
       },
       {
         q: "How often should I squat to get stronger?",
-        a: "Twice a week tends to be the sweet spot for most people balancing squat progress against everything else in a program — enough frequency to build the skill without burying yourself in fatigue.",
+        a: "Twice a week is the sweet spot for most people balancing squat progress against everything else in a program.",
       },
       {
         q: "Front squat vs back squat, which is better for strength?",
-        a: "Back squat almost always allows heavier loading since your upper back can brace more weight than your front rack position can hold. Front squat tends to build more direct quad and upper-back strength, but back squat is the better number if you're chasing a pure strength max.",
+        a: "Back squat wins on pure load — your upper back can brace more than a front rack position can hold. Front squat builds more direct quad and upper-back strength.",
       },
       {
         q: "Low bar vs high bar squat — does it change my max?",
-        a: "Usually yes, slightly. Low bar shifts more work to the hips and hamstrings and typically allows a bit more weight; high bar is more upright and quad-focused. Neither is 'cheating' — just be consistent about which one you're testing.",
+        a: "Usually, yes, slightly. Low bar shifts work to the hips and hamstrings and tends to allow a bit more weight. Just be consistent about which one you're testing.",
       },
       {
         q: "Is my back squat good for a beginner?",
-        a: "Hitting bodyweight for a full-depth single within your first year of consistent squatting is a solid beginner benchmark — plenty of people take longer, and that's fine too.",
+        a: "Bodyweight, full depth, single rep, within your first year — solid. Plenty of people take longer, and that's completely fine.",
       },
+
     ],
     relatedSlugs: ["hack-squat", "deadlift"],
   },
@@ -158,32 +161,33 @@ const exercises = [
     faqs: [
       {
         q: "How much should I deadlift?",
-        a: "Bodyweight for a clean pull is a fair starting marker. Most consistent lifters land somewhere around 1.5x bodyweight within their first couple years, and 2x-plus is where things start looking genuinely strong to most people watching.",
+        a: "Bodyweight is a fair starting marker. Most consistent lifters land near 1.5x within a couple years. 2x-plus starts looking genuinely strong to most people watching.",
       },
       {
         q: "Is my deadlift good for my bodyweight?",
-        a: "Check the ratio, not the raw number — a 400lb pull is very different for a 150lb lifter than a 250lb lifter. Enter your numbers above for a tier that actually accounts for that.",
+        a: "Check the ratio, not the number — a 400lb pull means very different things for a 150lb lifter and a 250lb one. Use your real numbers above.",
       },
       {
         q: "Conventional vs sumo deadlift — which pulls more weight?",
-        a: "Depends on your build, but generally sumo favors people with longer arms and a more upright torso, letting many lifters pull slightly more than conventional. Neither is objectively 'better' — whichever lets you keep a stable, safe position under heavier weight is the one worth training.",
+        a: "Depends on your build. Longer arms and an upright torso usually favor sumo. Neither is 'better' — whichever keeps you stable under more weight wins.",
       },
       {
         q: "How often should I deadlift heavy?",
-        a: "Once a week heavy is plenty for most people — deadlift fatigue tends to linger longer than other lifts, and chasing max effort pulls too often is a common way people stall out or get hurt.",
+        a: "Once a week is plenty. Deadlift fatigue lingers longer than most lifts, and chasing max singles too often is a common way people stall or get hurt.",
       },
       {
         q: "Trap bar deadlift vs conventional, is it easier?",
-        a: "Trap bar tends to be more forgiving on the lower back since the load sits closer to your center of gravity, and most lifters can move more weight on it than a conventional pull. It's a different exercise with its own standards, not a shortcut version of this one.",
+        a: "More forgiving on the lower back, since the load sits closer to your center of gravity. Most lifters move more weight on it too — but it's its own lift, not a shortcut version of this one.",
       },
       {
         q: "Romanian deadlift vs regular deadlift — same weight?",
-        a: "No, expect noticeably less on Romanian deadlift. It starts from the top, keeps the legs straighter, and is built more for hamstring loading than raw pulling strength — most lifters use 60-75% of their conventional deadlift for RDLs.",
+        a: "No. RDL starts from the top, keeps legs straighter, and hits hamstrings harder for less total load — 60-75% of your conventional number is typical.",
       },
       {
         q: "How much should I single leg deadlift?",
-        a: "Single leg deadlift is a stability and hamstring exercise, not a strength-max lift the way conventional deadlift is — most people use light dumbbells or just bodyweight and focus on balance rather than chasing a heavy number.",
+        a: "This one's about balance, not a max. Light dumbbells or bodyweight, focus on control — not a lift you should be chasing a big number on.",
       },
+
     ],
     relatedSlugs: ["sumo-deadlift", "romanian-deadlift"],
   },
@@ -206,32 +210,33 @@ const exercises = [
     faqs: [
       {
         q: "How much should I bench?",
-        a: "Bodyweight for a clean rep is the classic marker most people measure themselves against, and it's a fair one — it usually takes a solid year of consistent pressing to get there for most men, longer for people who started with little upper-body strength.",
+        a: "Bodyweight, clean rep — the classic marker, and a fair one. Takes most men a solid year of consistent pressing to get there.",
       },
       {
         q: "Is my bench press good?",
-        a: "1x bodyweight is respectable, 1.5x is genuinely strong for most recreational lifters, and 2x-plus is competition-lifter territory. Use the calculator above with your own bodyweight for a more specific read than a flat rule of thumb.",
+        a: "1x bodyweight is respectable. 1.5x is genuinely strong for most recreational lifters. 2x-plus is competition territory.",
       },
       {
         q: "Why is my bench not going up?",
-        a: "Triceps are the most common bottleneck once the easy beginner progress stops — if your bar speed dies in the top third of the press, that's usually the tell. Grip width and elbow angle are worth checking too before assuming you just need to 'bench more.'",
+        a: "Triceps are the usual bottleneck once beginner gains stop. If your bar speed dies in the top third, that's the tell — check grip width and elbow angle too.",
       },
       {
         q: "How much does the average person bench?",
-        a: "Most untrained adult men land somewhere well under bodyweight on a strict first attempt — public perception of 'average bench' skews high because gym anecdotes aren't a representative sample.",
+        a: "Most untrained men land well under bodyweight on a real first attempt. Gym anecdotes skew the public perception way higher than reality.",
       },
       {
         q: "Dumbbell bench press vs barbell — how much less should I lift?",
-        a: "Expect roughly 80-90% of your barbell number per hand combined, since stabilizing two independent weights is harder than a fixed bar. Don't be discouraged if your dumbbell total looks lower.",
+        a: "Roughly 80-90% of your barbell total combined. Stabilizing two independent weights is genuinely harder than a fixed bar.",
       },
       {
         q: "Incline bench press vs flat bench, how much difference?",
-        a: "Most lifters incline press somewhere around 80-85% of their flat bench weight — the more upright angle shifts load to the upper chest and shoulders, which usually aren't as strong as the pure horizontal pressing muscles.",
+        a: "Around 80-85% of your flat number is typical. The angle shifts load to muscles that usually aren't as strong.",
       },
       {
         q: "What's a good bench press for a beginner?",
-        a: "Getting to bodyweight for a single clean rep within your first year of consistent training is a solid beginner target — plenty of people take longer, especially without a base of general upper-body strength going in.",
+        a: "Bodyweight for a single clean rep within your first year is a solid target. Plenty of people take longer — that's normal.",
       },
+
     ],
     relatedSlugs: ["decline-bench-press", "dumbbell-bench-press"],
   },
@@ -262,44 +267,45 @@ const exercises = [
     faqs: [
       {
         q: "How much should I Romanian deadlift?",
-        a: "Most lifters use somewhere around 60-75% of their conventional deadlift weight for Romanian deadlift, since the range of motion and muscle emphasis are different. Use your own bodyweight and a real working set above rather than back-calculating from your conventional pull.",
+        a: "60-75% of your conventional deadlift is typical, since the range and emphasis differ. Test a real working set above rather than back-calculating.",
       },
       {
         q: "Romanian deadlift vs regular deadlift, what's the difference?",
-        a: "Regular deadlift starts from the floor and is a full-body strength test. Romanian deadlift starts from the top and stays in a narrower range, built specifically to load the hamstrings and glutes under stretch. They're complementary, not interchangeable.",
+        a: "Regular deadlift starts from the floor — full-body strength test. RDL starts from the top, narrower range, built specifically for hamstrings and glutes under stretch.",
       },
       {
         q: "Is my Romanian deadlift good?",
-        a: "If you can pull close to bodyweight for a controlled set of 8 with good hip hinge mechanics, that's a solid intermediate marker. Chasing heavy singles here isn't really the point — form and range of motion matter more than on almost any other barbell lift.",
+        a: "Close to bodyweight for a controlled set of 8 with real hip-hinge mechanics is solid. Chasing heavy singles here mostly misses the point.",
       },
       {
         q: "How do I do a Romanian deadlift properly?",
-        a: "Start standing with the bar at hip height, push your hips back while keeping a soft knee bend, and lower until you feel a real stretch in your hamstrings — usually around mid-shin to just below the knee, not all the way to the floor. Depth should come from your hip hinge, not from rounding your back.",
+        a: "Bar at hip height, push hips back with a soft knee bend, lower until you feel a real hamstring stretch — usually mid-shin. Depth comes from the hinge, not a rounded back.",
       },
       {
         q: "Dumbbell Romanian deadlift vs barbell — same weight?",
-        a: "Expect less total weight with dumbbells since you're stabilizing two independent loads and grip tends to give out sooner. It's a fine substitute if you don't have barbell access, just don't expect the numbers to match directly.",
+        a: "Less total weight — grip tends to give out before your hamstrings do. Fine substitute, just don't expect matching numbers.",
       },
       {
         q: "Single leg Romanian deadlift — how much weight?",
-        a: "This is a balance and unilateral-strength exercise more than a load test — most people use a light dumbbell or kettlebell per hand, sometimes just bodyweight, and focus on control rather than chasing a number.",
+        a: "This is a balance drill, not a load test. Light dumbbell or kettlebell, sometimes just bodyweight — control matters more than the number.",
       },
       {
         q: "Romanian deadlift for glutes — does it actually work them?",
-        a: "Yes, meaningfully — the stretched position at the bottom is exactly where glutes and hamstrings do the most work in this lift. It's a common accessory choice specifically for glute development alongside hip thrusts.",
+        a: "Yes — the stretched bottom position is exactly where glutes and hamstrings do the most work. Common accessory choice alongside hip thrusts.",
       },
       {
         q: "Can I do Romanian deadlift with a trap bar or hex bar?",
-        a: "Yes, and some lifters prefer it — the neutral grip and centered load can feel more comfortable on the lower back than a straight barbell. The movement pattern is the same; just expect the number to differ slightly from a straight-bar RDL.",
+        a: "Yes, and some prefer it. Neutral grip, centered load, often more comfortable on the lower back. Expect a slightly different number than a straight bar.",
       },
       {
         q: "What grip should I use for Romanian deadlift?",
-        a: "A double-overhand or mixed grip both work — mixed grip lets you hold more weight before your hands give out, but alternates which side you train unless you switch it set to set. Straps are a reasonable option once grip becomes the limiting factor before your hamstrings.",
+        a: "Double-overhand or mixed both work. Mixed lets you hold more before your hands give out, but alternates which side you train unless you switch sets.",
       },
       {
         q: "Can I do Romanian deadlift at home with no bar?",
-        a: "Yes — dumbbells, kettlebells, or a resistance band all let you train the same hip-hinge pattern without a barbell. You won't move as much weight, but the exercise still works the same muscles through the same range.",
+        a: "Dumbbells, kettlebells, or a band all train the same hip-hinge pattern. Less weight, same muscles, same range.",
       },
+
     ],
     relatedSlugs: ["deadlift", "trap-bar-deadlift"],
   },
@@ -330,36 +336,37 @@ const exercises = [
     faqs: [
       {
         q: "How much should I trap bar deadlift?",
-        a: "Most lifters can move somewhat more on trap bar than conventional deadlift — the calculator above uses ratios that reflect that, but check your own numbers rather than assuming a fixed percentage over your straight-bar pull.",
+        a: "Most lifters move somewhat more here than on conventional deadlift. Check your own numbers above rather than assuming a fixed percentage.",
       },
       {
         q: "Trap bar deadlift vs conventional deadlift, which is easier?",
-        a: "Trap bar is generally considered more beginner-friendly since the more upright torso position puts less shear stress on the lower back. That doesn't make it 'easier' exactly — it's a different, often more forgiving, movement pattern.",
+        a: "Generally considered more beginner-friendly — the upright torso puts less shear stress on the lower back. 'Easier' isn't quite right; it's just a more forgiving pattern.",
       },
       {
         q: "Is my trap bar deadlift good for my bodyweight?",
-        a: "Use the calculator above with your own numbers — trap bar standards run a bit higher than conventional deadlift standards for the same lifter, since the leverage is more favorable.",
+        a: "Trap bar standards run a bit higher than conventional for the same lifter, given the better leverage. Use your own numbers above.",
       },
       {
         q: "Hex bar deadlift vs trap bar deadlift, is it the same thing?",
-        a: "Yes, hex bar and trap bar refer to the same piece of equipment and the same lift — the name just varies by gym and by manufacturer.",
+        a: "Yes — same equipment, same lift. The name just varies by gym and manufacturer.",
       },
       {
         q: "Low handle vs high handle trap bar, does it change the weight?",
-        a: "Low handles increase the range of motion closer to a conventional deadlift and typically reduce how much you can lift compared to high handles, which shorten the pull and usually let you load more.",
+        a: "Low handles mean a deeper range, closer to conventional — usually less weight moved. High handles shorten the pull and typically let you load more.",
       },
       {
         q: "Can beginners start with trap bar deadlift instead of conventional?",
-        a: "Many coaches recommend exactly that — the more neutral spine position and simpler bar path make it a reasonable entry point before progressing to conventional or sumo deadlift technique.",
+        a: "Many coaches recommend exactly that. Neutral spine, simpler bar path — a reasonable entry point before conventional or sumo technique.",
       },
       {
         q: "Trap bar deadlift for glutes and legs — does it hit them differently?",
-        a: "It brings the quads into play more than a conventional deadlift does, closer to a squat-deadlift hybrid, while still working glutes and hamstrings hard through the hip extension.",
+        a: "More quad involvement than conventional deadlift, closer to a squat-deadlift hybrid, while still working glutes and hamstrings hard.",
       },
       {
         q: "What's the average trap bar deadlift weight?",
-        a: "This varies enormously by training background, so a flat average isn't that useful — use the calculator above with your own bodyweight for a number that actually means something for you.",
+        a: "Varies too much by training background for a flat average to mean much. Use the calculator above with your real bodyweight.",
       },
+
     ],
     relatedSlugs: ["deadlift", "romanian-deadlift"],
   },
@@ -389,36 +396,37 @@ const exercises = [
     faqs: [
       {
         q: "How much should I incline bench press?",
-        a: "Most lifters incline press somewhere around 80-85% of their flat bench weight. Use the calculator above with your own working set for a number specific to you rather than a flat percentage estimate.",
+        a: "Around 80-85% of your flat bench weight is typical. Test a real working set above for a number specific to you.",
       },
       {
         q: "Incline bench press vs flat bench, how much difference should there be?",
-        a: "A gap of 15-20% lower on incline is normal and expected — if your incline and flat numbers are close to identical, you're either very strong in the upper chest or not pushing your flat bench hard enough.",
+        a: "A 15-20% gap is normal. If they're nearly identical, either your upper chest is very strong or your flat bench isn't being pushed hard enough.",
       },
       {
         q: "Is my incline bench press good?",
-        a: "Compare it to your own flat bench rather than to a stranger's numbers — the ratio between the two tells you more about your balance than either number alone.",
+        a: "Compare it to your own flat bench, not a stranger's numbers — the ratio between the two tells you more than either number alone.",
       },
       {
         q: "Dumbbell incline bench press — how much per hand?",
-        a: "Expect noticeably less than half your barbell incline number per dumbbell, since stabilizing two independent weights at an angle is harder than a fixed bar. Many lifters find dumbbell incline humbling the first few times they try it heavy.",
+        a: "Noticeably less than half your barbell number. Stabilizing two weights on an angle is genuinely harder than it looks.",
       },
       {
         q: "What's the best incline angle for chest growth?",
-        a: "Most research and coaching consensus points to somewhere around 30 degrees as a sweet spot — enough to shift emphasis upward without turning the lift into mostly a shoulder exercise.",
+        a: "Around 30 degrees is the general sweet spot — enough shift upward without turning it into mostly a shoulder exercise.",
       },
       {
         q: "Incline bench press on a smith machine — does it count?",
-        a: "It's a valid variation, just don't expect the number to transfer directly to free-weight incline — the fixed bar path removes a lot of the stabilizer demand, so people often move more weight on a smith machine than free bar.",
+        a: "Valid variation, but don't expect it to transfer to free weight — the fixed path removes a lot of stabilizer demand, so the number usually runs higher.",
       },
       {
         q: "Why is my incline bench press so much weaker than flat?",
-        a: "Some gap is normal, but a very large one often points to underdeveloped front delts and upper chest relative to your overall pressing strength — worth prioritizing incline work directly if that's the case.",
+        a: "Some gap is normal. A big one usually points to underdeveloped front delts and upper chest — worth training incline directly if that's the case.",
       },
       {
         q: "What angle should my incline bench be set to?",
-        a: "Most gym benches default to somewhere around 30-45 degrees, which is a reasonable range. Steeper angles shift more work to the shoulders; check your bench's setting before comparing your number to anyone else's.",
+        a: "Most gym benches default to 30-45 degrees, which is reasonable. Steeper shifts more to the shoulders — check your bench before comparing numbers with anyone.",
       },
+
     ],
     relatedSlugs: ["bench-press", "floor-press"],
   },
@@ -448,36 +456,37 @@ const exercises = [
     faqs: [
       {
         q: "How much should I chest press on the machine?",
-        a: "Machine numbers don't compare directly to barbell bench due to the fixed path removing stabilizer demand — most people move more weight on a chest press machine than they do on barbell bench. Use the calculator above for a number specific to the machine, not a barbell comparison.",
+        a: "More than barbell bench, usually — the fixed path removes stabilizer demand. Use the calculator above for a machine-specific number, not a barbell comparison.",
       },
       {
         q: "Is chest press machine as good as bench press?",
-        a: "It trains the same primary muscles but skips the stabilizer and balance demands of a free barbell. Good for isolating the chest or training around a barbell limitation, but most serious lifters use it alongside barbell work, not instead of it.",
+        a: "Same primary muscles, none of the balance demand. Good for isolating the chest or working around a barbell limitation — most serious lifters use it alongside barbell work, not instead.",
       },
       {
         q: "Seated chest press machine vs bench press, which builds more strength?",
-        a: "Barbell bench generally builds more transferable, real-world pressing strength since it requires stabilization the machine does for you. Machine press is excellent for isolating the chest with less technical demand and less injury risk when training to failure.",
+        a: "Barbell bench builds more transferable strength since it demands stabilization the machine does for you. Machine press is excellent for chest isolation with less injury risk to failure.",
       },
       {
         q: "Cable chest press vs machine chest press, what's the difference?",
-        a: "Cable chest press keeps constant tension through the whole range and allows a more natural pressing arc, while a fixed machine follows one set path. Both are valid — cables tend to feel more like dumbbells, machines feel more locked-in.",
+        a: "Cables keep constant tension and allow a more natural arc. Machines follow one fixed path. Cables feel more like dumbbells; machines feel more locked in.",
       },
       {
         q: "Smith machine chest press — how does it compare?",
-        a: "Similar to a fixed machine in that the bar path is locked vertically, removing side-to-side stabilization. Numbers here tend to land between free barbell and a dedicated chest press machine.",
+        a: "Vertical bar path, no side-to-side stabilization needed. Numbers usually land somewhere between free barbell and a dedicated chest press machine.",
       },
       {
         q: "Incline chest press machine — does it work the same as barbell incline?",
-        a: "Same general emphasis on upper chest and front delts, but with the same reduced stabilizer demand as any other machine — expect to move somewhat more weight than free-weight incline bench.",
+        a: "Same upper-chest emphasis, same reduced stabilizer demand as any machine — expect to move more weight than free-weight incline.",
       },
       {
         q: "What's a good chest press machine weight for beginners?",
-        a: "Start light enough to control the full range smoothly for 10-12 reps before adding weight — the fixed path makes it easy to load more than your stabilizers and joints are actually ready for.",
+        a: "Light enough to control the full range for 10-12 reps before adding weight. The fixed path makes it easy to overload joints that aren't ready yet.",
       },
       {
         q: "Does grip width change chest press machine results?",
-        a: "Yes — a wider grip puts more emphasis on the chest, while a narrower grip shifts more work to the triceps. Most machines let you adjust handle position for exactly this reason.",
+        a: "Yes — wider emphasizes chest, narrower shifts to triceps. Most machines let you adjust for exactly this reason.",
       },
+
     ],
     relatedSlugs: ["bench-press", "incline-bench-press"],
   },
@@ -507,28 +516,29 @@ const exercises = [
     faqs: [
       {
         q: "How much should I floor press?",
-        a: "Expect somewhat less than your flat bench press, since the shortened range removes some of the stretch-driven power at the bottom. Use the calculator above with a real working set rather than assuming a fixed percentage of your bench.",
+        a: "Somewhat less than flat bench — the shortened range cuts out some of the bottom-driven power. Test a real set above rather than assuming a fixed percentage.",
       },
       {
         q: "Floor press vs bench press, what's actually different?",
-        a: "Floor press stops the moment your upper arms hit the ground, cutting out the bottom portion of the range and removing leg drive entirely. It shifts more emphasis to triceps and lockout strength, and it's easier on the shoulders for a lot of lifters.",
+        a: "Stops the moment your upper arms hit the ground — no leg drive, shorter range, more triceps and lockout emphasis. Easier on the shoulders for a lot of lifters.",
       },
       {
         q: "Is floor press good for shoulder pain?",
-        a: "Many lifters find it more comfortable than full bench press since the shortened range avoids the deepest, most shoulder-stressful part of the movement — though it's worth checking with a physical therapist if you're managing an actual injury rather than just general discomfort.",
+        a: "Many find it more comfortable than full bench, since it skips the deepest part of the range. Worth checking with a physical therapist for an actual injury though, not just general discomfort.",
       },
       {
         q: "Barbell floor press vs dumbbell floor press?",
-        a: "Dumbbells allow a bit more range and independent arm movement, which some lifters find better for symmetry work, while barbell floor press typically allows heavier total loading.",
+        a: "Dumbbells allow more range and independent arm movement — good for symmetry. Barbell typically allows heavier total loading.",
       },
       {
         q: "Does floor press build tricep strength for bench lockout?",
-        a: "Yes, this is one of its most common uses — powerlifters often add floor press specifically to strengthen the lockout portion of their bench press where triceps do most of the work.",
+        a: "Yes — a common powerlifting accessory specifically for strengthening the lockout portion where triceps do most of the work.",
       },
       {
         q: "How do I set up a floor press at home?",
-        a: "Lie on the floor under a barbell in a rack low enough to unrack from the ground, or have a partner hand it to you — no bench needed, which is part of why it's a popular home-gym substitute for bench press.",
+        a: "Lie under a rack low enough to unrack from the ground, or have a partner hand it to you. No bench required — part of why it's a popular home-gym substitute.",
       },
+
     ],
     relatedSlugs: ["bench-press", "incline-bench-press"],
   },
@@ -559,36 +569,37 @@ const exercises = [
     faqs: [
       {
         q: "How much should I sumo deadlift?",
-        a: "Many lifters pull slightly more sumo than conventional due to the shorter range of motion and more favorable leverage, though this varies a lot by individual build. Use the calculator above with your own numbers rather than assuming a fixed percentage over your conventional pull.",
+        a: "Many lifters pull slightly more sumo than conventional, thanks to the shorter range and better leverage — though it varies a lot by build. Use your own numbers above.",
       },
       {
         q: "Sumo vs conventional deadlift, which is stronger?",
-        a: "Neither is universally stronger — it depends on your limb proportions. Lifters with long arms and a shorter torso often pull more sumo; lifters built the opposite way often do better conventional. Try both and see which lets you keep a stable position under more weight.",
+        a: "Depends on you. Long arms and a shorter torso often favor sumo. Try both, see which keeps you stable under more weight.",
       },
       {
         q: "Is my sumo deadlift good for my bodyweight?",
-        a: "Check your ratio using the calculator above — sumo standards run close to conventional deadlift standards for most lifters, just shifted slightly given the different mechanics.",
+        a: "Sumo standards run close to conventional for most lifters, shifted slightly for the different mechanics. Check your ratio above.",
       },
       {
         q: "How do I sumo deadlift with proper form?",
-        a: "Take a wide stance with toes turned out, grip inside your knees, and keep your shins nearly vertical as you set up. Push the floor away with your legs rather than just pulling with your back — the leg drive is what separates a good sumo pull from a bad one.",
+        a: "Wide stance, toes out, grip inside your knees, shins nearly vertical at setup. Push the floor away with your legs — that leg drive separates a good pull from a bad one.",
       },
       {
         q: "Why is my sumo deadlift weaker than conventional?",
-        a: "Sumo asks more of your hip mobility and adductor strength — if either is limited, you may not be able to access the leverage advantage sumo is supposed to give you. It's common for lifters new to sumo to be weaker at it initially before their mobility catches up.",
+        a: "Sumo demands more hip mobility and adductor strength. If either is limited, you can't access the leverage advantage yet — common for lifters new to the stance.",
       },
       {
         q: "Sumo deadlift for glutes — does it work them more?",
-        a: "Yes, generally more than conventional deadlift, since the wider stance and more upright torso put the glutes and adductors in a stronger mechanical position throughout the pull.",
+        a: "Generally yes — the wider stance and upright torso put glutes and adductors in a stronger position through the pull.",
       },
       {
         q: "What's a good sumo deadlift for beginners?",
-        a: "Focus on hip mobility and stance width before chasing weight — sumo technique takes most beginners longer to groove than conventional, even though the eventual number often ends up higher.",
+        a: "Mobility and stance width before weight. Sumo technique usually takes longer to groove than conventional, even though the eventual number often ends up higher.",
       },
       {
         q: "Can I do sumo deadlift on a smith machine?",
-        a: "Yes, though the fixed vertical bar path changes the exercise somewhat by removing some of the balance and bar-path control that free-weight sumo requires.",
+        a: "Yes, though the fixed vertical path removes some of the balance and bar-path control free-weight sumo actually requires.",
       },
+
     ],
     relatedSlugs: ["deadlift", "stiff-leg-deadlift"],
   },
@@ -619,28 +630,29 @@ const exercises = [
     faqs: [
       {
         q: "How much should I stiff-leg deadlift?",
-        a: "Expect a lower number than Romanian deadlift and noticeably lower than conventional deadlift, since the straighter-leg, floor-start position increases the hamstring stretch demand. Use the calculator above with your own working set for an accurate read.",
+        a: "Lower than Romanian deadlift, noticeably lower than conventional — the straighter-leg, floor-start position increases the stretch demand. Test a real set above.",
       },
       {
         q: "Stiff-leg deadlift vs Romanian deadlift, what's the real difference?",
-        a: "Stiff-leg starts from the floor with knees nearly locked; Romanian deadlift starts from hip height with more knee bend and typically a shorter range. They train similar muscles but stiff-leg usually feels more demanding on the hamstrings at the bottom.",
+        a: "Stiff-leg starts from the floor, knees nearly locked. RDL starts from hip height, more knee bend, shorter range. Similar muscles, but stiff-leg usually hits the hamstrings harder at the bottom.",
       },
       {
         q: "Is my stiff-leg deadlift good?",
-        a: "If you can pull around half your bodyweight for a controlled set of 8 with a real hamstring stretch and no lower-back rounding, that's a solid intermediate marker.",
+        a: "Around half your bodyweight for a controlled set of 8, no lower-back rounding — solid intermediate marker.",
       },
       {
         q: "How do I do a stiff-leg deadlift safely?",
-        a: "Keep your knees only very slightly bent, hinge from the hips, and stop the descent once you feel a real hamstring stretch or your lower back starts to round — going lower than your flexibility allows is where this exercise gets risky.",
+        a: "Knees only very slightly bent, hinge from the hips, stop once you feel a real stretch or your back starts to round. Going lower than your flexibility allows is where this gets risky.",
       },
       {
         q: "Dumbbell stiff-leg deadlift — how much weight?",
-        a: "Most people use noticeably less than barbell, since grip and stabilization become limiting factors sooner. It's a fine substitute for home training, just don't expect the same number.",
+        a: "Noticeably less than barbell — grip and stabilization become limiting factors sooner. Fine for home training, just don't expect the same number.",
       },
       {
         q: "Can beginners do stiff-leg deadlift?",
-        a: "Yes, but hamstring flexibility is often the limiting factor before strength is — start light and prioritize a full, controlled range over adding weight quickly.",
+        a: "Yes, but hamstring flexibility is usually the limiting factor before strength is. Start light, prioritize full range over adding weight.",
       },
+
     ],
     relatedSlugs: ["romanian-deadlift", "sumo-deadlift"],
   },
@@ -670,28 +682,29 @@ const exercises = [
     faqs: [
       {
         q: "How much should I decline bench press?",
-        a: "Many lifters move slightly more weight on decline than flat bench, since the shorter effective range and more favorable joint angle work in your favor. Use the calculator above with your own numbers rather than assuming a fixed relationship to flat bench.",
+        a: "Often slightly more than flat bench — shorter effective range, more favorable joint angle. Test your own numbers above.",
       },
       {
         q: "Decline bench press vs flat bench, which is stronger?",
-        a: "Decline is often the strongest of the three bench angles for most lifters, since the reduced range of motion and joint positioning favor moving more weight — though the training effect is more focused on the lower chest.",
+        a: "Decline is often the strongest of the three bench angles for most lifters. The training effect shifts more toward the lower chest though.",
       },
       {
         q: "Is my decline bench press good?",
-        a: "Compare it to your flat bench — if decline is noticeably lower than flat, that's unusual and worth checking your setup and stability rather than assuming it's a strength issue.",
+        a: "Compare it to flat bench. If decline is noticeably lower, that's unusual — worth checking your setup and stability rather than assuming a strength issue.",
       },
       {
         q: "What's decline bench press good for?",
-        a: "It's a solid option for targeting the lower chest specifically, and some lifters find it easier on the shoulders than flat or incline bench due to the joint angle at the bottom of the press.",
+        a: "Targeting the lower chest specifically. Some lifters also find it easier on the shoulders than flat or incline.",
       },
       {
         q: "Decline dumbbell press vs barbell decline — how much less?",
-        a: "Expect somewhat less than your barbell number, similar to the gap you'd see between flat barbell and flat dumbbell bench, since stabilizing two independent weights is harder than a fixed bar.",
+        a: "Similar gap to flat barbell vs flat dumbbell — expect somewhat less, since stabilizing two independent weights is harder than a fixed bar.",
       },
       {
         q: "Is decline bench press safe?",
-        a: "It's safe with proper setup — securing your legs or feet under the provided pads matters more here than on flat or incline, since the angle makes it easier to slide during a heavy rep.",
+        a: "Safe with a proper setup. Secure your legs or feet under the pads — the angle makes it easier to slide during a heavy rep than flat or incline.",
       },
+
     ],
     relatedSlugs: ["bench-press", "incline-bench-press"],
   },
@@ -721,32 +734,33 @@ const exercises = [
     faqs: [
       {
         q: "How much should I dumbbell bench press?",
-        a: "Use total combined weight of both dumbbells for the calculator above, not weight per hand. Most lifters move noticeably less on dumbbell bench than barbell bench due to the added stabilizer demand.",
+        a: "Use total combined weight of both dumbbells, not per hand. Most lifters move less here than on barbell, thanks to the added stabilizer demand.",
       },
       {
         q: "Dumbbell bench press vs barbell bench press, how much less should I expect?",
-        a: "Roughly 80-90% of your barbell total is a common range, though this varies a lot based on how much stabilizer and shoulder strength you've built specifically with dumbbells.",
+        a: "80-90% of your barbell total is a common range — varies a lot based on how much dumbbell-specific stabilizer strength you've built.",
       },
       {
         q: "Is my dumbbell bench press good?",
-        a: "Compare the ratio to your barbell bench rather than judging the number alone — a big gap between the two usually points to underdeveloped stabilizers rather than a chest strength issue.",
+        a: "Compare the ratio to your barbell bench, not the number alone. A big gap usually points to underdeveloped stabilizers, not a chest issue.",
       },
       {
         q: "What's a good dumbbell bench press for beginners?",
-        a: "Focus on control through the full range before adding weight — dumbbell bench punishes poor stabilization more than barbell does, and it's easy to overestimate what you can safely handle based on your barbell number alone.",
+        a: "Control through the full range before adding weight. Dumbbell bench punishes poor stabilization more than barbell does — easy to overestimate what you can handle.",
       },
       {
         q: "Neutral grip vs regular grip dumbbell press — does it change the weight?",
-        a: "Neutral grip (palms facing each other) is often slightly easier on the shoulders and may allow marginally more weight for lifters with shoulder discomfort in a standard grip.",
+        a: "Neutral grip is often slightly easier on the shoulders and may allow marginally more weight if you're managing shoulder discomfort.",
       },
       {
         q: "Can I do dumbbell bench press without a bench?",
-        a: "Yes — floor dumbbell press is a common substitute when no bench is available, though it shortens your range of motion similar to a barbell floor press.",
+        a: "Yes — floor dumbbell press is a common substitute, though it shortens your range similar to a barbell floor press.",
       },
       {
         q: "Why can't I lift as much with dumbbells as with a barbell?",
-        a: "This is completely normal, not a sign of weakness — a barbell's fixed path does a lot of stabilization work for you that two independent dumbbells require your shoulders and core to do instead.",
+        a: "Completely normal. A barbell's fixed path does stabilization work for you that two independent dumbbells force your shoulders and core to do instead.",
       },
+
     ],
     relatedSlugs: ["bench-press", "decline-bench-press"],
   },
@@ -774,20 +788,21 @@ const exercises = [
     faqs: [
       {
         q: "How much should I snatch-grip deadlift?",
-        a: "Expect noticeably less than your conventional deadlift — the wider grip and increased range make this a harder pull at the same weight, so don't be discouraged by a lower number here.",
+        a: "Noticeably less than conventional deadlift — the wider grip and longer range make this a harder pull at the same weight. Don't be discouraged by the lower number.",
       },
       {
         q: "Snatch-grip deadlift vs conventional deadlift, what's the point?",
-        a: "It's commonly used to build upper-back and trap strength that carries over to Olympic lifting and to conventional deadlift lockout, not usually trained as a max-strength lift on its own.",
+        a: "Builds upper-back and trap strength that carries over to Olympic lifting and conventional lockout. Not usually trained as a max-strength lift on its own.",
       },
       {
         q: "How wide should my grip be for snatch-grip deadlift?",
-        a: "Wide enough that the bar sits at roughly hip-crease height when you're standing tall holding it — for most lifters that's noticeably wider than snatch-grip width feels like it should be at first.",
+        a: "Wide enough that the bar sits at roughly hip-crease height standing tall — for most lifters that's wider than it feels like it should be at first.",
       },
       {
         q: "Is snatch-grip deadlift good for building deadlift strength?",
-        a: "Yes, particularly for the upper back and lockout portion of a conventional pull — it's a common accessory choice for lifters whose conventional deadlift breaks down at the top.",
+        a: "Yes, particularly the upper back and lockout — common accessory for lifters whose conventional pull breaks down at the top.",
       },
+
     ],
     relatedSlugs: ["deadlift", "sumo-deadlift"],
   },
@@ -817,36 +832,37 @@ const exercises = [
     faqs: [
       {
         q: "How much should I shoulder press?",
-        a: "Bodyweight for a clean standing press is a strong benchmark most lifters take years to reach. Use the calculator above with your own numbers for a tier that reflects your actual training, not a flat guess.",
+        a: "Bodyweight for a clean standing press is a strong benchmark most lifters take years to reach. Use your own numbers above rather than a flat guess.",
       },
       {
         q: "Shoulder press vs overhead press, are they the same thing?",
-        a: "Yes, these names are used interchangeably for the same movement — pressing weight straight overhead. Some gyms and coaches use 'overhead press' specifically for the strict standing barbell version.",
+        a: "Yes — interchangeable names for the same movement. Some gyms use 'overhead press' specifically for the strict standing barbell version.",
       },
       {
         q: "Is my shoulder press good?",
-        a: "Half your bodyweight for a clean standing press is a solid intermediate marker for most lifters — this is a harder lift to build relative strength on than bench press, so don't compare the two numbers directly.",
+        a: "Half your bodyweight, clean standing press — solid intermediate marker. Harder to build relative strength on than bench, so don't compare the two directly.",
       },
       {
         q: "Standing vs seated shoulder press, which is stronger?",
-        a: "Most lifters press somewhat more seated, since the bench removes the core and leg stabilization standing press demands. Neither is 'wrong' — just be consistent about which one you're testing.",
+        a: "Most lifters press somewhat more seated, since the bench removes core and leg stabilization. Neither is 'wrong' — just be consistent about which you're testing.",
       },
       {
         q: "Dumbbell shoulder press vs barbell, how much less?",
-        a: "Expect noticeably less total weight with dumbbells, since stabilizing two independent weights overhead is significantly harder than a fixed bar path.",
+        a: "Noticeably less total weight — stabilizing two independent weights overhead is significantly harder than a fixed bar.",
       },
       {
         q: "What muscles does shoulder press work?",
-        a: "Primarily your front and side deltoids, with triceps handling the lockout and your upper back and core working hard just to keep you stable under the weight.",
+        a: "Front and side deltoids primarily. Triceps handle the lockout; upper back and core work hard just to keep you stable underneath the weight.",
       },
       {
         q: "Why is my shoulder press so much weaker than my bench press?",
-        a: "This is completely normal — shoulder press removes the mechanical advantages bench press gives you (a stable bench, shorter effective range for many lifters, and no need to stabilize the weight against gravity pulling you back). A shoulder press around half your bench is common.",
+        a: "Normal — shoulder press strips away the mechanical advantages bench gives you. Half your bench is a common ratio.",
       },
       {
         q: "What's a good shoulder press for beginners?",
-        a: "Focus on strict form and a full lockout before adding weight — pressing with your lower back rather than your shoulders is the most common beginner mistake, and it's easy to hide with momentum.",
+        a: "Strict form and a full lockout before adding weight. Pressing with your lower back instead of your shoulders is the most common — and easiest to hide — beginner mistake.",
       },
+
     ],
     relatedSlugs: ["bench-press", "incline-bench-press"],
   },
@@ -876,32 +892,33 @@ const exercises = [
     faqs: [
       {
         q: "How much weight should I add to pull-ups?",
-        a: "If you can already do 8-10 strict bodyweight pull-ups comfortably, adding 10-15% of your bodyweight is a reasonable starting point for weighted work. Use the calculator above once you have a real weighted set to test.",
+        a: "If 8-10 strict bodyweight reps feel comfortable, 10-15% of your bodyweight is a reasonable starting add. Test a real weighted set above once you have one.",
       },
       {
         q: "Is my pull-up strength good?",
-        a: "Being able to do a single strict bodyweight pull-up already puts you ahead of a large share of gym-goers. Adding meaningful weight — 25%+ of your bodyweight for a clean rep — is a genuinely strong marker.",
+        a: "A single strict bodyweight rep already puts you ahead of a large share of gym-goers. 25%+ of bodyweight added for a clean rep is genuinely strong.",
       },
       {
         q: "Chin up vs pull up, what's the difference?",
-        a: "Pull-ups use an overhand, palms-away grip and emphasize the lats more. Chin-ups use an underhand, palms-toward-you grip and bring the biceps in more — most people find chin-ups slightly easier for the same bodyweight.",
+        a: "Overhand grip, palms away, more lat emphasis for pull-ups. Underhand, palms toward you, more bicep involvement for chin-ups — most people find chin-ups slightly easier.",
       },
       {
         q: "How do I do my first pull-up?",
-        a: "Assisted pull-up machines, resistance bands looped over the bar, and negative reps (jumping to the top and lowering slowly) are the three most common paths to a first strict rep.",
+        a: "Assisted machines, resistance bands over the bar, and slow negatives are the three most common paths to a first strict rep.",
       },
       {
         q: "What's a good number of pull-ups for my bodyweight?",
-        a: "This calculator is built for weighted pull-ups specifically — if you're doing bodyweight-only reps, aim to build toward 10+ strict reps before adding external weight.",
+        a: "This calculator's built for weighted pull-ups specifically. If you're bodyweight-only, aim for 10+ strict reps before adding external weight.",
       },
       {
         q: "Neutral grip vs wide grip pull-ups, which is easier?",
-        a: "Neutral grip (palms facing each other) is generally the easiest on the joints and often lets people do more reps. Wide grip is usually the hardest and most lat-focused.",
+        a: "Neutral (palms facing each other) is easiest on the joints, usually lets people do more reps. Wide grip is typically the hardest and most lat-focused.",
       },
       {
         q: "How do I add weight to pull-ups?",
-        a: "A dip belt with a weight plate hanging from a chain is the standard method, though a weighted vest or holding a dumbbell between your feet both work as alternatives.",
+        a: "A dip belt with a plate on a chain is standard. A weighted vest or a dumbbell between your feet both work too.",
       },
+
     ],
     relatedSlugs: ["chin-up", "barbell-row"],
   },
@@ -930,24 +947,25 @@ const exercises = [
     faqs: [
       {
         q: "How much should I weighted chin-up?",
-        a: "Chin-ups typically allow slightly more added weight than pull-ups for the same lifter, since the biceps contribute more. Use the calculator above once you have a real weighted set to test.",
+        a: "Slightly more added weight than pull-ups typically, since biceps contribute more. Test a real weighted set above.",
       },
       {
         q: "Chin-ups vs pull-ups, which builds more strength?",
-        a: "Both are excellent — chin-ups tend to let you handle more weight and reps due to bicep involvement, while pull-ups place slightly more isolated demand on the lats. Many lifters train both.",
+        a: "Both excellent. Chin-ups let you handle more weight and reps due to bicep involvement; pull-ups place more isolated demand on the lats.",
       },
       {
         q: "Is my chin-up strength good?",
-        a: "10+ strict bodyweight chin-ups is a solid marker most dedicated lifters can reach with consistent training. Adding real weight beyond that — 30%+ of bodyweight for a clean rep — is genuinely strong.",
+        a: "10+ strict bodyweight reps is a solid marker most dedicated lifters reach with consistent training. 30%+ of bodyweight added is genuinely strong.",
       },
       {
         q: "How many chin-ups should a beginner be able to do?",
-        a: "Even one or two strict, full-range reps is a fair beginner starting point — a huge share of people, even fit ones, can't do a single strict chin-up without some training first.",
+        a: "One or two strict, full-range reps is a fair start. A lot of otherwise-fit people can't do a single strict chin-up without some training first.",
       },
       {
         q: "Why can I do more chin-ups than pull-ups?",
-        a: "This is completely normal and expected — the underhand grip lets your biceps assist the lats more directly, which is why almost everyone can do more reps chin-up style at the same bodyweight.",
+        a: "Completely normal — the underhand grip lets biceps assist the lats more directly. Almost everyone does more reps chin-up style at the same bodyweight.",
       },
+
     ],
     relatedSlugs: ["pull-up", "barbell-row"],
   },
@@ -977,32 +995,33 @@ const exercises = [
     faqs: [
       {
         q: "How much should I barbell row?",
-        a: "Bodyweight for a clean set of 8 with good hip-hinge form is a solid intermediate marker. Use the calculator above with your own numbers for a more precise read.",
+        a: "Bodyweight for a clean set of 8 with good hip-hinge form is a solid intermediate marker. Use the calculator above for a more precise read.",
       },
       {
         q: "Is my barbell row good?",
-        a: "Compare it to your deadlift — a barbell row somewhere around 50-65% of your deadlift is a reasonable, well-balanced ratio for most lifters.",
+        a: "Compare it to your deadlift — somewhere around 50-65% is a well-balanced ratio for most lifters.",
       },
       {
         q: "What's proper barbell row form?",
-        a: "Hinge at the hips with a flat back, let the bar hang at arm's length, then pull it to your lower ribs or upper stomach without your torso swinging up to help. The angle of your torso should stay roughly constant through the set.",
+        a: "Hinge at the hips, flat back, bar hangs at arm's length, pull to your lower ribs without your torso swinging up to help. Keep the torso angle roughly constant.",
       },
       {
         q: "Barbell row muscles worked — what does it actually train?",
-        a: "Primarily your lats and the muscles across your upper and mid back, with real secondary work for your biceps, rear delts, and grip strength.",
+        a: "Primarily lats and upper/mid back, with real secondary work for biceps, rear delts, and grip.",
       },
       {
         q: "Pendlay row vs regular barbell row, what's the difference?",
-        a: "Pendlay rows reset the bar to the floor every rep, removing momentum and forcing each pull to start from a dead stop. Regular bent-over rows keep continuous tension and typically let you move slightly more total weight.",
+        a: "Pendlay resets to the floor every rep, no momentum. Regular bent-over rows keep continuous tension and typically move slightly more total weight.",
       },
       {
         q: "What grip should I use for barbell row — overhand or underhand?",
-        a: "Overhand (pronated) grip emphasizes the upper back more; underhand (supinated, like a Yates row) brings in more biceps and often allows a bit more weight. Both are valid — many lifters rotate between them.",
+        a: "Overhand emphasizes the upper back more. Underhand (Yates-style) brings in more biceps and often allows a bit more weight. Both valid — many lifters rotate.",
       },
       {
         q: "Barbell row on a Smith machine — does it work as well?",
-        a: "It removes some of the balance and core-stability demand of free-weight rowing, which some lifters actually prefer if lower-back fatigue is limiting their rowing weight otherwise.",
+        a: "Removes some balance and core demand, which some lifters actually prefer if lower-back fatigue is limiting their rowing weight otherwise.",
       },
+
     ],
     relatedSlugs: ["deadlift", "lat-pulldown"],
   },
@@ -1032,28 +1051,29 @@ const exercises = [
     faqs: [
       {
         q: "How much should I lat pulldown?",
-        a: "Bodyweight on the stack for a clean set of 8-10 is a solid intermediate marker for most lifters. Use the calculator above with your own numbers — machine stack calibration varies enough between gyms that flat benchmarks aren't very reliable.",
+        a: "Bodyweight on the stack for a clean set of 8-10 is a solid intermediate marker. Machine calibration varies enough between gyms that flat benchmarks aren't that reliable.",
       },
       {
         q: "Is my lat pulldown weight good compared to my pull-ups?",
-        a: "If you can lat pulldown noticeably more than your bodyweight but still can't do a strict pull-up, that's a common and normal gap — the pulldown lets you train the same muscles without needing to move your full bodyweight yet.",
+        a: "Pulling down noticeably more than bodyweight while still not managing a strict pull-up is common and normal — the pulldown trains the muscles without needing your full bodyweight yet.",
       },
       {
         q: "Wide grip vs close grip lat pulldown — which is better?",
-        a: "Wide grip emphasizes the outer lats and is usually the hardest to load heavy. Close or neutral grip typically allows more weight and brings in more biceps. Neither is strictly better — they train the muscle slightly differently.",
+        a: "Wide emphasizes the outer lats, usually harder to load heavy. Close or neutral grip typically allows more weight and brings in more biceps. Neither is strictly better.",
       },
       {
         q: "Lat pulldown vs pull up, which should I do?",
-        a: "Lat pulldown is a great way to build volume and strength toward pull-ups, especially for people who can't yet do a strict bodyweight rep. Once you can pull-up comfortably, both remain useful — pulldown for volume, pull-ups for the harder relative-strength test.",
+        a: "Pulldown builds volume and strength toward pull-ups, especially if you can't yet do a strict rep. Once you can, both stay useful — pulldown for volume, pull-ups for the harder test.",
       },
       {
         q: "What's a good lat pulldown weight for beginners?",
-        a: "Start light enough to control the full range and really feel your lats working, rather than yanking the weight down with momentum — this is one of the easiest machines to load too heavy too fast.",
+        a: "Light enough to control the full range and actually feel your lats — one of the easiest machines to overload with momentum.",
       },
       {
         q: "Straight arm pulldown — is it the same exercise?",
-        a: "No — straight-arm pulldown keeps your arms nearly locked and pulls from the shoulder, isolating the lats without much bicep help. It's a different, lighter-loaded exercise, not a variation of standard lat pulldown.",
+        a: "No — arms stay nearly locked, pulling from the shoulder, isolating the lats without much bicep help. Different, lighter-loaded exercise.",
       },
+
     ],
     relatedSlugs: ["barbell-row", "pull-up"],
   },

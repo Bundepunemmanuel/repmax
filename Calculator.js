@@ -38,7 +38,7 @@ export default function Calculator({ exerciseName, ratios, slug, challenge }) {
         <div className="flex rounded-full bg-peach p-1 font-mono text-xs">
           <button
             onClick={() => setUnit("lb")}
-            className={`rounded-full px-3 py-1.5 transition-colors ${
+            className={`rounded-full px-3 py-1.5 transition-all active:scale-90 ${
               unit === "lb" ? "bg-ink text-white" : "text-mute"
             }`}
           >
@@ -46,7 +46,7 @@ export default function Calculator({ exerciseName, ratios, slug, challenge }) {
           </button>
           <button
             onClick={() => setUnit("kg")}
-            className={`rounded-full px-3 py-1.5 transition-colors ${
+            className={`rounded-full px-3 py-1.5 transition-all active:scale-90 ${
               unit === "kg" ? "bg-ink text-white" : "text-mute"
             }`}
           >
@@ -60,7 +60,7 @@ export default function Calculator({ exerciseName, ratios, slug, challenge }) {
         <div className="grid grid-cols-2 gap-2 rounded-full bg-peach p-1">
           <button
             onClick={() => setGender("men")}
-            className={`rounded-full py-2 text-sm font-semibold transition-colors ${
+            className={`rounded-full py-2 text-sm font-semibold transition-all active:scale-95 ${
               gender === "men" ? "bg-ink text-white" : "text-mute"
             }`}
           >
@@ -68,7 +68,7 @@ export default function Calculator({ exerciseName, ratios, slug, challenge }) {
           </button>
           <button
             onClick={() => setGender("women")}
-            className={`rounded-full py-2 text-sm font-semibold transition-colors ${
+            className={`rounded-full py-2 text-sm font-semibold transition-all active:scale-95 ${
               gender === "women" ? "bg-ink text-white" : "text-mute"
             }`}
           >
@@ -122,13 +122,13 @@ export default function Calculator({ exerciseName, ratios, slug, challenge }) {
 
       {/* Result */}
       {estimated1RM && (
-        <div className="mx-5 mb-5 rounded-2xl bg-gradient-to-br from-flare/10 to-flare2/10 p-5 sm:mx-7 sm:p-6">
+        <div className="mx-5 mb-5 animate-fade-in-up rounded-2xl bg-gradient-to-br from-flare/10 to-flare2/10 p-5 sm:mx-7 sm:p-6">
           <div className="flex flex-wrap items-baseline justify-between gap-2">
             <div>
               <div className="text-xs font-medium text-mute">
                 Estimated one-rep max
               </div>
-              <div className="font-display text-5xl font-extrabold text-flare sm:text-6xl">
+              <div className="animate-stat-pop font-display text-5xl font-extrabold text-flare sm:text-6xl">
                 {estimated1RM}
                 <span className="ml-1.5 text-lg font-semibold text-mute">
                   {unit}
@@ -136,7 +136,7 @@ export default function Calculator({ exerciseName, ratios, slug, challenge }) {
               </div>
             </div>
             {tierInfo && (
-              <span className="rounded-full bg-flare px-3.5 py-1.5 text-sm font-bold text-white">
+              <span className="animate-fade-in-up rounded-full bg-flare px-3.5 py-1.5 text-sm font-bold text-white">
                 {tierInfo.tier}
               </span>
             )}
@@ -179,7 +179,7 @@ export default function Calculator({ exerciseName, ratios, slug, challenge }) {
             {tierTable.map((row) => (
               <div
                 key={row.label}
-                className={`flex items-center justify-between rounded-2xl px-4 py-3 text-sm ${
+                className={`flex items-center justify-between rounded-2xl px-4 py-3 text-sm transition-colors duration-300 ${
                   tierInfo?.tier === row.label
                     ? "bg-flare text-white"
                     : "bg-peach text-ink"
