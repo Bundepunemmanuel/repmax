@@ -185,7 +185,7 @@ const exercises = [
         a: "Single leg deadlift is a stability and hamstring exercise, not a strength-max lift the way conventional deadlift is — most people use light dumbbells or just bodyweight and focus on balance rather than chasing a heavy number.",
       },
     ],
-    relatedSlugs: ["romanian-deadlift", "trap-bar-deadlift"],
+    relatedSlugs: ["sumo-deadlift", "romanian-deadlift"],
   },
   {
     slug: "bench-press",
@@ -233,7 +233,7 @@ const exercises = [
         a: "Getting to bodyweight for a single clean rep within your first year of consistent training is a solid beginner target — plenty of people take longer, especially without a base of general upper-body strength going in.",
       },
     ],
-    relatedSlugs: ["incline-bench-press", "floor-press"],
+    relatedSlugs: ["decline-bench-press", "dumbbell-bench-press"],
   },
   {
     slug: "romanian-deadlift",
@@ -531,6 +531,265 @@ const exercises = [
       },
     ],
     relatedSlugs: ["bench-press", "incline-bench-press"],
+  },
+  {
+    slug: "sumo-deadlift",
+    name: "Sumo Deadlift",
+    category: "Back & Posterior Chain",
+    equipment: "Barbell",
+    intro:
+      "Sumo deadlift uses a wide stance with your hands gripping inside your knees, keeping your torso more upright than a conventional pull. It shifts more of the work to your quads and hips, and a lot of lifters — especially those with longer arms or a shorter torso — end up pulling more weight sumo than conventional.",
+    muscles: "Quads and glutes take on more of the load than in conventional deadlift, with the more upright torso reducing lower-back demand.",
+    formNote:
+      "Knees track out in line with your toes, not caving in, and your hips should be lower than a conventional setup but still above parallel. The bar path is meant to be nearly vertical — if it's swinging out around your knees, your stance or setup needs adjusting.",
+    ratios: {
+      men: { beginner: 0.75, novice: 1.05, intermediate: 1.55, advanced: 2.05, elite: 2.55 },
+      women: { beginner: 0.6, novice: 0.9, intermediate: 1.4, advanced: 1.8, elite: 2.3 },
+    },
+    variantNote:
+      "Semi-sumo splits the difference between conventional and full sumo stance width, and is common among lifters who don't get much benefit from a maximally wide stance.",
+    variations: [
+      { name: "Semi-sumo deadlift", note: "Narrower than full sumo, wider than conventional — a common middle ground." },
+      { name: "Kettlebell sumo deadlift", note: "Lighter loading, often used as a warm-up pattern or for higher reps." },
+      { name: "Smith machine sumo deadlift", note: "Fixed vertical bar path, removes some of the balance demand." },
+      { name: "Deficit sumo deadlift", note: "Standing on a platform to increase range of motion — noticeably harder." },
+      { name: "Sumo deadlift high pull", note: "A pulling-and-shrug combination movement, common in CrossFit-style training." },
+      { name: "Landmine sumo deadlift", note: "Bar anchored at one end, shorter arc, often used as a beginner regression." },
+    ],
+    faqs: [
+      {
+        q: "How much should I sumo deadlift?",
+        a: "Many lifters pull slightly more sumo than conventional due to the shorter range of motion and more favorable leverage, though this varies a lot by individual build. Use the calculator above with your own numbers rather than assuming a fixed percentage over your conventional pull.",
+      },
+      {
+        q: "Sumo vs conventional deadlift, which is stronger?",
+        a: "Neither is universally stronger — it depends on your limb proportions. Lifters with long arms and a shorter torso often pull more sumo; lifters built the opposite way often do better conventional. Try both and see which lets you keep a stable position under more weight.",
+      },
+      {
+        q: "Is my sumo deadlift good for my bodyweight?",
+        a: "Check your ratio using the calculator above — sumo standards run close to conventional deadlift standards for most lifters, just shifted slightly given the different mechanics.",
+      },
+      {
+        q: "How do I sumo deadlift with proper form?",
+        a: "Take a wide stance with toes turned out, grip inside your knees, and keep your shins nearly vertical as you set up. Push the floor away with your legs rather than just pulling with your back — the leg drive is what separates a good sumo pull from a bad one.",
+      },
+      {
+        q: "Why is my sumo deadlift weaker than conventional?",
+        a: "Sumo asks more of your hip mobility and adductor strength — if either is limited, you may not be able to access the leverage advantage sumo is supposed to give you. It's common for lifters new to sumo to be weaker at it initially before their mobility catches up.",
+      },
+      {
+        q: "Sumo deadlift for glutes — does it work them more?",
+        a: "Yes, generally more than conventional deadlift, since the wider stance and more upright torso put the glutes and adductors in a stronger mechanical position throughout the pull.",
+      },
+      {
+        q: "What's a good sumo deadlift for beginners?",
+        a: "Focus on hip mobility and stance width before chasing weight — sumo technique takes most beginners longer to groove than conventional, even though the eventual number often ends up higher.",
+      },
+      {
+        q: "Can I do sumo deadlift on a smith machine?",
+        a: "Yes, though the fixed vertical bar path changes the exercise somewhat by removing some of the balance and bar-path control that free-weight sumo requires.",
+      },
+    ],
+    relatedSlugs: ["deadlift", "stiff-leg-deadlift"],
+  },
+  {
+    slug: "stiff-leg-deadlift",
+    name: "Stiff-Leg Deadlift",
+    category: "Back & Posterior Chain",
+    equipment: "Barbell",
+    intro:
+      "Stiff-leg deadlift keeps your knees nearly locked throughout the movement, starting from the floor rather than hip height like a Romanian deadlift. That small difference — floor start, straighter legs — makes it a more demanding hamstring stretch and a different exercise from RDLs, even though people often use the names interchangeably.",
+    muscles: "Hamstrings and lower back get the most direct load, with glutes assisting through the hip extension at the top.",
+    formNote:
+      "Keep a very slight bend in your knees — completely locked is unnecessary and increases strain without adding benefit. The movement should come almost entirely from your hips folding forward, not your knees bending.",
+    ratios: {
+      men: { beginner: 0.35, novice: 0.55, intermediate: 0.8, advanced: 1.15, elite: 1.5 },
+      women: { beginner: 0.25, novice: 0.4, intermediate: 0.65, advanced: 0.9, elite: 1.2 },
+    },
+    variantNote:
+      "Stiff-leg deadlift and Romanian deadlift are often used as the same exercise, but technically differ — stiff-leg starts from the floor with straighter knees, RDL starts from hip height with more knee bend. Expect a lower number here than on RDL.",
+    variations: [
+      { name: "Dumbbell stiff-leg deadlift", note: "Common home-gym substitute — lighter loading than barbell." },
+      { name: "Barbell stiff-leg deadlift", note: "The standard version this calculator is built around." },
+      { name: "Smith machine stiff-leg deadlift", note: "Fixed bar path, removes some balance demand." },
+      { name: "Banded stiff-leg deadlift", note: "Bands add resistance at the top of the movement." },
+      { name: "Kettlebell stiff-leg deadlift", note: "Lighter loading, often used for higher-rep hamstring work." },
+      { name: "Trap bar stiff-leg deadlift", note: "Neutral grip version, sometimes more comfortable on the lower back." },
+    ],
+    faqs: [
+      {
+        q: "How much should I stiff-leg deadlift?",
+        a: "Expect a lower number than Romanian deadlift and noticeably lower than conventional deadlift, since the straighter-leg, floor-start position increases the hamstring stretch demand. Use the calculator above with your own working set for an accurate read.",
+      },
+      {
+        q: "Stiff-leg deadlift vs Romanian deadlift, what's the real difference?",
+        a: "Stiff-leg starts from the floor with knees nearly locked; Romanian deadlift starts from hip height with more knee bend and typically a shorter range. They train similar muscles but stiff-leg usually feels more demanding on the hamstrings at the bottom.",
+      },
+      {
+        q: "Is my stiff-leg deadlift good?",
+        a: "If you can pull around half your bodyweight for a controlled set of 8 with a real hamstring stretch and no lower-back rounding, that's a solid intermediate marker.",
+      },
+      {
+        q: "How do I do a stiff-leg deadlift safely?",
+        a: "Keep your knees only very slightly bent, hinge from the hips, and stop the descent once you feel a real hamstring stretch or your lower back starts to round — going lower than your flexibility allows is where this exercise gets risky.",
+      },
+      {
+        q: "Dumbbell stiff-leg deadlift — how much weight?",
+        a: "Most people use noticeably less than barbell, since grip and stabilization become limiting factors sooner. It's a fine substitute for home training, just don't expect the same number.",
+      },
+      {
+        q: "Can beginners do stiff-leg deadlift?",
+        a: "Yes, but hamstring flexibility is often the limiting factor before strength is — start light and prioritize a full, controlled range over adding weight quickly.",
+      },
+    ],
+    relatedSlugs: ["romanian-deadlift", "sumo-deadlift"],
+  },
+  {
+    slug: "decline-bench-press",
+    name: "Decline Bench Press",
+    category: "Push",
+    equipment: "Barbell",
+    intro:
+      "Decline bench press is done on a bench angled downward, head lower than hips, shifting emphasis to the lower chest. It's the least common of the three bench angles, but a real strength number in its own right — and for a lot of lifters, it's actually the easiest angle to move the most weight on.",
+    muscles: "Lower chest gets the most direct emphasis, with triceps still doing significant work through lockout.",
+    formNote:
+      "Make sure your feet or legs are properly secured before unracking — the decline angle makes it easier to slide during a heavy set than flat or incline bench.",
+    ratios: {
+      men: { beginner: 0.55, novice: 0.8, intermediate: 1.1, advanced: 1.6, elite: 2.1 },
+      women: { beginner: 0.35, novice: 0.5, intermediate: 0.7, advanced: 1.0, elite: 1.35 },
+    },
+    variantNote:
+      "Decline dumbbell press, decline machine press, and cable decline press all produce different numbers than barbell decline — machines especially, since the fixed path removes stabilizer demand.",
+    variations: [
+      { name: "Decline dumbbell press", note: "Harder to stabilize than barbell — expect a lower number per hand." },
+      { name: "Decline chest press machine", note: "Fixed path removes stabilizer demand, numbers run higher." },
+      { name: "Cable decline press", note: "Constant tension through the range, common as an accessory movement." },
+      { name: "Decline smith machine press", note: "Vertical fixed path — a middle ground between free weight and machine." },
+      { name: "Decline hammer press", note: "Plate-loaded machine version with independent arm movement." },
+    ],
+    faqs: [
+      {
+        q: "How much should I decline bench press?",
+        a: "Many lifters move slightly more weight on decline than flat bench, since the shorter effective range and more favorable joint angle work in your favor. Use the calculator above with your own numbers rather than assuming a fixed relationship to flat bench.",
+      },
+      {
+        q: "Decline bench press vs flat bench, which is stronger?",
+        a: "Decline is often the strongest of the three bench angles for most lifters, since the reduced range of motion and joint positioning favor moving more weight — though the training effect is more focused on the lower chest.",
+      },
+      {
+        q: "Is my decline bench press good?",
+        a: "Compare it to your flat bench — if decline is noticeably lower than flat, that's unusual and worth checking your setup and stability rather than assuming it's a strength issue.",
+      },
+      {
+        q: "What's decline bench press good for?",
+        a: "It's a solid option for targeting the lower chest specifically, and some lifters find it easier on the shoulders than flat or incline bench due to the joint angle at the bottom of the press.",
+      },
+      {
+        q: "Decline dumbbell press vs barbell decline — how much less?",
+        a: "Expect somewhat less than your barbell number, similar to the gap you'd see between flat barbell and flat dumbbell bench, since stabilizing two independent weights is harder than a fixed bar.",
+      },
+      {
+        q: "Is decline bench press safe?",
+        a: "It's safe with proper setup — securing your legs or feet under the provided pads matters more here than on flat or incline, since the angle makes it easier to slide during a heavy rep.",
+      },
+    ],
+    relatedSlugs: ["bench-press", "incline-bench-press"],
+  },
+  {
+    slug: "dumbbell-bench-press",
+    name: "Dumbbell Bench Press",
+    category: "Push",
+    equipment: "Dumbbell",
+    intro:
+      "Flat dumbbell bench press — same lying position as barbell bench, but with two independent weights instead of a fixed bar. The lack of a fixed bar path means your stabilizer muscles do a lot more work, which is exactly why most lifters can't move as much total weight here as they can on barbell.",
+    muscles: "Chest, front delts, and triceps, same as barbell bench, with more stabilizer demand from the shoulders and core to control two independent weights.",
+    formNote:
+      "Let the dumbbells travel slightly wider than a barbell would at the bottom of the rep — trying to force a barbell-style narrow path with dumbbells is a common way people limit their own range of motion unnecessarily.",
+    ratios: {
+      men: { beginner: 0.35, novice: 0.55, intermediate: 0.8, advanced: 1.2, elite: 1.6 },
+      women: { beginner: 0.2, novice: 0.3, intermediate: 0.5, advanced: 0.75, elite: 1.0 },
+    },
+    variantNote:
+      "This number reflects total weight (both dumbbells combined), not weight per hand — a common point of confusion when comparing numbers with someone else.",
+    variations: [
+      { name: "Flat dumbbell press", note: "The standard version this calculator is built around." },
+      { name: "Neutral grip dumbbell press", note: "Palms facing each other — often more comfortable for the shoulders." },
+      { name: "Reverse grip dumbbell press", note: "Palms facing your feet — shifts more emphasis to the upper chest." },
+      { name: "Floor dumbbell press", note: "Done lying on the floor — shortens the range like a barbell floor press." },
+      { name: "Single-arm dumbbell press", note: "Unilateral version, adds a real core anti-rotation demand." },
+    ],
+    faqs: [
+      {
+        q: "How much should I dumbbell bench press?",
+        a: "Use total combined weight of both dumbbells for the calculator above, not weight per hand. Most lifters move noticeably less on dumbbell bench than barbell bench due to the added stabilizer demand.",
+      },
+      {
+        q: "Dumbbell bench press vs barbell bench press, how much less should I expect?",
+        a: "Roughly 80-90% of your barbell total is a common range, though this varies a lot based on how much stabilizer and shoulder strength you've built specifically with dumbbells.",
+      },
+      {
+        q: "Is my dumbbell bench press good?",
+        a: "Compare the ratio to your barbell bench rather than judging the number alone — a big gap between the two usually points to underdeveloped stabilizers rather than a chest strength issue.",
+      },
+      {
+        q: "What's a good dumbbell bench press for beginners?",
+        a: "Focus on control through the full range before adding weight — dumbbell bench punishes poor stabilization more than barbell does, and it's easy to overestimate what you can safely handle based on your barbell number alone.",
+      },
+      {
+        q: "Neutral grip vs regular grip dumbbell press — does it change the weight?",
+        a: "Neutral grip (palms facing each other) is often slightly easier on the shoulders and may allow marginally more weight for lifters with shoulder discomfort in a standard grip.",
+      },
+      {
+        q: "Can I do dumbbell bench press without a bench?",
+        a: "Yes — floor dumbbell press is a common substitute when no bench is available, though it shortens your range of motion similar to a barbell floor press.",
+      },
+      {
+        q: "Why can't I lift as much with dumbbells as with a barbell?",
+        a: "This is completely normal, not a sign of weakness — a barbell's fixed path does a lot of stabilization work for you that two independent dumbbells require your shoulders and core to do instead.",
+      },
+    ],
+    relatedSlugs: ["bench-press", "decline-bench-press"],
+  },
+  {
+    slug: "snatch-grip-deadlift",
+    name: "Snatch-Grip Deadlift",
+    category: "Back & Posterior Chain",
+    equipment: "Barbell",
+    intro:
+      "Snatch-grip deadlift uses a much wider grip than conventional deadlift, close to what an Olympic snatch requires. The wider grip increases the range of motion significantly, which makes this a harder pull than conventional deadlift at the same weight — expect a real drop in your numbers the first time you try it.",
+    muscles: "Upper back and traps get significantly more work than conventional deadlift, alongside the usual hamstrings, glutes, and grip demand.",
+    formNote:
+      "The increased range of motion means your hips will start lower than a conventional deadlift setup — treat your first few sessions as technique practice, not a max-weight test.",
+    ratios: {
+      men: { beginner: 0.4, novice: 0.6, intermediate: 0.9, advanced: 1.3, elite: 1.7 },
+      women: { beginner: 0.3, novice: 0.45, intermediate: 0.7, advanced: 1.0, elite: 1.3 },
+    },
+    variantNote:
+      "This is a less common lift with a smaller but genuinely engaged search audience — mostly Olympic weightlifters, CrossFit athletes, and lifters using it as an upper-back accessory movement.",
+    variations: [
+      { name: "Snatch-grip deadlift from a deficit", note: "Standing on a platform to increase the range even further." },
+      { name: "Snatch-grip rack pull", note: "Partial range version, starting from pins in a rack rather than the floor." },
+      { name: "Snatch-grip high pull", note: "Adds an explosive pulling and shrugging phase, common in Olympic lifting prep." },
+    ],
+    faqs: [
+      {
+        q: "How much should I snatch-grip deadlift?",
+        a: "Expect noticeably less than your conventional deadlift — the wider grip and increased range make this a harder pull at the same weight, so don't be discouraged by a lower number here.",
+      },
+      {
+        q: "Snatch-grip deadlift vs conventional deadlift, what's the point?",
+        a: "It's commonly used to build upper-back and trap strength that carries over to Olympic lifting and to conventional deadlift lockout, not usually trained as a max-strength lift on its own.",
+      },
+      {
+        q: "How wide should my grip be for snatch-grip deadlift?",
+        a: "Wide enough that the bar sits at roughly hip-crease height when you're standing tall holding it — for most lifters that's noticeably wider than snatch-grip width feels like it should be at first.",
+      },
+      {
+        q: "Is snatch-grip deadlift good for building deadlift strength?",
+        a: "Yes, particularly for the upper back and lockout portion of a conventional pull — it's a common accessory choice for lifters whose conventional deadlift breaks down at the top.",
+      },
+    ],
+    relatedSlugs: ["deadlift", "sumo-deadlift"],
   },
 ];
 
