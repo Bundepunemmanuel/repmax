@@ -17,6 +17,8 @@ const exercises = [
       men: { beginner: 0.75, novice: 1.0, intermediate: 1.5, advanced: 2.0, elite: 2.5 },
       women: { beginner: 0.6, novice: 0.85, intermediate: 1.25, advanced: 1.75, elite: 2.25 },
     },
+    variantNote:
+      "This calculator covers the standard barbell hip thrust off a bench. Single-leg and dumbbell hip thrusts load very differently — expect roughly half the weight for a single-leg variation at the same relative difficulty.",
     faqs: [
       {
         q: "How much should I hip thrust?",
@@ -27,12 +29,24 @@ const exercises = [
         a: "Compare it to your squat and deadlift, not to a stranger's numbers. If your hip thrust is noticeably lower than 1.5x your squat, your glutes are probably the limiting factor in both lifts and worth prioritizing for a while.",
       },
       {
+        q: "What's a good hip thrust for beginners?",
+        a: "If you're new to the movement, focus on hitting bodyweight for 8 clean reps before adding much load. Most beginners can add weight quickly here compared to squats or deadlifts, since the range of motion is shorter and there's less to coordinate.",
+      },
+      {
         q: "Hip thrust vs glute bridge — what's the difference?",
         a: "Glute bridge is the floor version with a shorter range of motion and less loading potential. Hip thrust, with your upper back elevated on a bench, lets you go through a full range and load it much heavier. If you're maxing out glute bridge weight, hip thrust is the natural next step.",
       },
       {
+        q: "How much should I single leg hip thrust?",
+        a: "Expect roughly 40-50% of your two-leg hip thrust weight per side. It's a stability-heavy variation, so don't be surprised if the number feels low relative to your barbell number at first.",
+      },
+      {
         q: "How do I improve my hip thrust?",
         a: "Pause for a full second at the top on your working sets — it's tempting to bounce through lockout once the weight gets heavy, and that's where most of the false progress comes from. Also check your foot placement; too far forward or back changes the leverage more than people expect.",
+      },
+      {
+        q: "What's the average hip thrust for women?",
+        a: "Using the calculator above with the women's toggle gives a more accurate number than a flat average, since bodyweight ratio matters more here than almost any other lift — hip thrust standards scale differently by gender than something like bench press.",
       },
     ],
     relatedSlugs: ["hack-squat", "back-squat"],
@@ -51,6 +65,8 @@ const exercises = [
       men: { beginner: 0.5, novice: 0.85, intermediate: 1.3, advanced: 1.8, elite: 2.4 },
       women: { beginner: 0.4, novice: 0.65, intermediate: 1.0, advanced: 1.4, elite: 1.9 },
     },
+    variantNote:
+      "Sled weight varies a lot by machine and by brand — some hack squat sleds start at 30lb empty, others closer to 100lb. Total weight moved (sled + plates) is what the calculator above expects, not just the plates you loaded.",
     faqs: [
       {
         q: "How much should I hack squat?",
@@ -63,6 +79,18 @@ const exercises = [
       {
         q: "How much does the hack squat sled weigh?",
         a: "Anywhere from 30 to over 100 lbs depending on the machine — check the base plate on yours, it's usually stamped somewhere on the frame. This matters a lot if you're tracking progress across different gyms.",
+      },
+      {
+        q: "Hack squat vs leg press, which is better?",
+        a: "Hack squat keeps you more upright and involves more knee-dominant mechanics, closer to a real squat pattern. Leg press lets you go heavier with less technical demand but trains a slightly different angle. Neither replaces the other — a lot of serious lifters use both.",
+      },
+      {
+        q: "What's a good hack squat weight for beginners?",
+        a: "If you're new to the machine, start light and nail your depth and foot placement before adding weight — hack squat lets you hide bad habits behind heavy loading more easily than a free-weight squat would.",
+      },
+      {
+        q: "Can I hack squat with a barbell?",
+        a: "Yes, the barbell hack squat is an older variation, bar held behind your legs rather than on a machine. It's a different (and harder) movement pattern than the machine version, and the weights aren't directly comparable.",
       },
     ],
     relatedSlugs: ["back-squat", "hip-thrust"],
@@ -81,6 +109,8 @@ const exercises = [
       men: { beginner: 0.5, novice: 0.75, intermediate: 1.25, advanced: 1.75, elite: 2.25 },
       women: { beginner: 0.4, novice: 0.6, intermediate: 1.0, advanced: 1.5, elite: 1.9 },
     },
+    variantNote:
+      "High-bar and low-bar back squat use slightly different mechanics and often produce slightly different maxes for the same lifter. This calculator treats them as one number — pick whichever style you actually trained the set with.",
     faqs: [
       {
         q: "How much should I squat?",
@@ -97,6 +127,14 @@ const exercises = [
       {
         q: "Front squat vs back squat, which is better for strength?",
         a: "Back squat almost always allows heavier loading since your upper back can brace more weight than your front rack position can hold. Front squat tends to build more direct quad and upper-back strength, but back squat is the better number if you're chasing a pure strength max.",
+      },
+      {
+        q: "Low bar vs high bar squat — does it change my max?",
+        a: "Usually yes, slightly. Low bar shifts more work to the hips and hamstrings and typically allows a bit more weight; high bar is more upright and quad-focused. Neither is 'cheating' — just be consistent about which one you're testing.",
+      },
+      {
+        q: "Is my back squat good for a beginner?",
+        a: "Hitting bodyweight for a full-depth single within your first year of consistent squatting is a solid beginner benchmark — plenty of people take longer, and that's fine too.",
       },
     ],
     relatedSlugs: ["hack-squat", "deadlift"],
@@ -115,6 +153,8 @@ const exercises = [
       men: { beginner: 0.75, novice: 1.0, intermediate: 1.5, advanced: 2.0, elite: 2.5 },
       women: { beginner: 0.6, novice: 0.85, intermediate: 1.35, advanced: 1.75, elite: 2.25 },
     },
+    variantNote:
+      "This calculator is built around conventional deadlift. Romanian deadlift, trap bar deadlift, and stiff-leg deadlift all load differently enough that they deserve their own numbers, not a percentage of this one.",
     faqs: [
       {
         q: "How much should I deadlift?",
@@ -131,6 +171,18 @@ const exercises = [
       {
         q: "How often should I deadlift heavy?",
         a: "Once a week heavy is plenty for most people — deadlift fatigue tends to linger longer than other lifts, and chasing max effort pulls too often is a common way people stall out or get hurt.",
+      },
+      {
+        q: "Trap bar deadlift vs conventional, is it easier?",
+        a: "Trap bar tends to be more forgiving on the lower back since the load sits closer to your center of gravity, and most lifters can move more weight on it than a conventional pull. It's a different exercise with its own standards, not a shortcut version of this one.",
+      },
+      {
+        q: "Romanian deadlift vs regular deadlift — same weight?",
+        a: "No, expect noticeably less on Romanian deadlift. It starts from the top, keeps the legs straighter, and is built more for hamstring loading than raw pulling strength — most lifters use 60-75% of their conventional deadlift for RDLs.",
+      },
+      {
+        q: "How much should I single leg deadlift?",
+        a: "Single leg deadlift is a stability and hamstring exercise, not a strength-max lift the way conventional deadlift is — most people use light dumbbells or just bodyweight and focus on balance rather than chasing a heavy number.",
       },
     ],
     relatedSlugs: ["back-squat", "hip-thrust"],
@@ -149,6 +201,8 @@ const exercises = [
       men: { beginner: 0.5, novice: 0.75, intermediate: 1.0, advanced: 1.5, elite: 2.0 },
       women: { beginner: 0.3, novice: 0.45, intermediate: 0.65, advanced: 0.95, elite: 1.3 },
     },
+    variantNote:
+      "This calculator is built around flat barbell bench. Incline bench, dumbbell bench, and machine chest press all produce different numbers for the same lifter — usually somewhat lower than a flat barbell max.",
     faqs: [
       {
         q: "How much should I bench?",
@@ -165,6 +219,18 @@ const exercises = [
       {
         q: "How much does the average person bench?",
         a: "Most untrained adult men land somewhere well under bodyweight on a strict first attempt — public perception of 'average bench' skews high because gym anecdotes aren't a representative sample.",
+      },
+      {
+        q: "Dumbbell bench press vs barbell — how much less should I lift?",
+        a: "Expect roughly 80-90% of your barbell number per hand combined, since stabilizing two independent weights is harder than a fixed bar. Don't be discouraged if your dumbbell total looks lower.",
+      },
+      {
+        q: "Incline bench press vs flat bench, how much difference?",
+        a: "Most lifters incline press somewhere around 80-85% of their flat bench weight — the more upright angle shifts load to the upper chest and shoulders, which usually aren't as strong as the pure horizontal pressing muscles.",
+      },
+      {
+        q: "What's a good bench press for a beginner?",
+        a: "Getting to bodyweight for a single clean rep within your first year of consistent training is a solid beginner target — plenty of people take longer, especially without a base of general upper-body strength going in.",
       },
     ],
     relatedSlugs: ["back-squat", "deadlift"],
