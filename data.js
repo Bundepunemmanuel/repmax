@@ -251,6 +251,14 @@ const exercises = [
     },
     variantNote:
       "Dumbbell, kettlebell, cable, and single-leg Romanian deadlifts are all real variations with their own loading expectations — usually lighter and more stability-focused than the barbell version this calculator is built around.",
+    variations: [
+      { name: "Dumbbell RDL", note: "Lighter than barbell, grip usually gives out before your hamstrings do." },
+      { name: "Kettlebell RDL", note: "Common home-gym substitute — lighter loads, same hip hinge pattern." },
+      { name: "Cable RDL", note: "Constant tension through the whole range, popular for higher-rep glute work." },
+      { name: "Single-leg RDL", note: "A balance and unilateral-strength drill more than a load test." },
+      { name: "Landmine RDL", note: "Bar anchored at one end — shorter arc, often gentler on the lower back." },
+      { name: "Banded / resistance-band RDL", note: "A common bodyweight-at-home version when there's no bar available." },
+    ],
     faqs: [
       {
         q: "How much should I Romanian deadlift?",
@@ -284,6 +292,14 @@ const exercises = [
         q: "Can I do Romanian deadlift with a trap bar or hex bar?",
         a: "Yes, and some lifters prefer it — the neutral grip and centered load can feel more comfortable on the lower back than a straight barbell. The movement pattern is the same; just expect the number to differ slightly from a straight-bar RDL.",
       },
+      {
+        q: "What grip should I use for Romanian deadlift?",
+        a: "A double-overhand or mixed grip both work — mixed grip lets you hold more weight before your hands give out, but alternates which side you train unless you switch it set to set. Straps are a reasonable option once grip becomes the limiting factor before your hamstrings.",
+      },
+      {
+        q: "Can I do Romanian deadlift at home with no bar?",
+        a: "Yes — dumbbells, kettlebells, or a resistance band all let you train the same hip-hinge pattern without a barbell. You won't move as much weight, but the exercise still works the same muscles through the same range.",
+      },
     ],
     relatedSlugs: ["deadlift", "trap-bar-deadlift"],
   },
@@ -303,6 +319,14 @@ const exercises = [
     },
     variantNote:
       "Trap bars come in a few handle heights — low-handle versions are closer to a conventional deadlift range of motion, high-handle versions are shorter and typically let you move more weight.",
+    variations: [
+      { name: "Low-handle trap bar", note: "Deeper range of motion, closer to a conventional deadlift pull." },
+      { name: "High-handle trap bar", note: "Shorter range — most lifters move more weight here." },
+      { name: "Deficit trap bar deadlift", note: "Standing on a small platform to increase range of motion and difficulty." },
+      { name: "Elevated trap bar deadlift", note: "Bar raised on blocks to shorten the range — useful for overload work." },
+      { name: "Banded trap bar deadlift", note: "Bands added for extra tension at lockout, common in strength programs." },
+      { name: "Trap bar deadlift with dumbbells", note: "A home-gym substitute when no trap bar is available — much lighter loading." },
+    ],
     faqs: [
       {
         q: "How much should I trap bar deadlift?",
@@ -332,6 +356,10 @@ const exercises = [
         q: "Trap bar deadlift for glutes and legs — does it hit them differently?",
         a: "It brings the quads into play more than a conventional deadlift does, closer to a squat-deadlift hybrid, while still working glutes and hamstrings hard through the hip extension.",
       },
+      {
+        q: "What's the average trap bar deadlift weight?",
+        a: "This varies enormously by training background, so a flat average isn't that useful — use the calculator above with your own bodyweight for a number that actually means something for you.",
+      },
     ],
     relatedSlugs: ["deadlift", "romanian-deadlift"],
   },
@@ -351,6 +379,13 @@ const exercises = [
     },
     variantNote:
       "Dumbbell incline press, smith machine incline press, and incline machine press all produce different numbers than barbell incline — dumbbells especially, since stabilizing two weights on an angle is genuinely harder than on flat bench.",
+    variations: [
+      { name: "Dumbbell incline press", note: "Harder to stabilize than barbell — expect a noticeably lower number." },
+      { name: "Smith machine incline press", note: "Fixed bar path removes side-to-side stabilization, so numbers run higher." },
+      { name: "Cable incline press", note: "Constant tension through the range, popular as an accessory movement." },
+      { name: "Hammer strength incline press", note: "Plate-loaded machine version — independent arms, fixed path." },
+      { name: "Seated incline press", note: "Often refers to a shoulder-focused machine variant, not the barbell lift." },
+    ],
     faqs: [
       {
         q: "How much should I incline bench press?",
@@ -380,6 +415,10 @@ const exercises = [
         q: "Why is my incline bench press so much weaker than flat?",
         a: "Some gap is normal, but a very large one often points to underdeveloped front delts and upper chest relative to your overall pressing strength — worth prioritizing incline work directly if that's the case.",
       },
+      {
+        q: "What angle should my incline bench be set to?",
+        a: "Most gym benches default to somewhere around 30-45 degrees, which is a reasonable range. Steeper angles shift more work to the shoulders; check your bench's setting before comparing your number to anyone else's.",
+      },
     ],
     relatedSlugs: ["bench-press", "floor-press"],
   },
@@ -399,6 +438,13 @@ const exercises = [
     },
     variantNote:
       "Plate-loaded chest press machines and selectorized (pin-stack) machines often feel different at the same listed number due to cam resistance curves — don't be surprised if your max shifts a bit switching between machine brands.",
+    variations: [
+      { name: "Decline chest press machine", note: "Shifts emphasis to the lower chest, less common than flat or incline." },
+      { name: "Standing chest press (cable)", note: "Adds a core-stability demand that seated machines remove entirely." },
+      { name: "One-arm chest press", note: "Unilateral version, useful for fixing left-right imbalances." },
+      { name: "Wide grip vs narrow grip", note: "Wider grip emphasizes chest more; narrower shifts more to triceps." },
+      { name: "Neutral / reverse grip chest press", note: "Easier on the shoulders for lifters managing joint discomfort." },
+    ],
     faqs: [
       {
         q: "How much should I chest press on the machine?",
@@ -428,6 +474,10 @@ const exercises = [
         q: "What's a good chest press machine weight for beginners?",
         a: "Start light enough to control the full range smoothly for 10-12 reps before adding weight — the fixed path makes it easy to load more than your stabilizers and joints are actually ready for.",
       },
+      {
+        q: "Does grip width change chest press machine results?",
+        a: "Yes — a wider grip puts more emphasis on the chest, while a narrower grip shifts more work to the triceps. Most machines let you adjust handle position for exactly this reason.",
+      },
     ],
     relatedSlugs: ["bench-press", "incline-bench-press"],
   },
@@ -447,6 +497,13 @@ const exercises = [
     },
     variantNote:
       "Dumbbell floor press and single-arm floor press are common variations that trade some load capacity for a bit more stabilizer and core demand than the barbell version.",
+    variations: [
+      { name: "Barbell floor press", note: "The standard version this calculator is built around." },
+      { name: "Single-arm dumbbell floor press", note: "Adds a real anti-rotation core demand — go noticeably lighter." },
+      { name: "Smith machine floor press", note: "Fixed bar path, removes side-to-side stabilization." },
+      { name: "Incline floor press", note: "Less common — done on a wedge or with shoulders slightly elevated." },
+      { name: "Decline floor press", note: "Rare variation, shifts a bit more emphasis to the lower chest." },
+    ],
     faqs: [
       {
         q: "How much should I floor press?",
