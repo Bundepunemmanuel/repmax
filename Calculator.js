@@ -1,7 +1,8 @@
 import { useState, useMemo } from "react";
 import { epley1RM, getTier, buildTierTable } from "./calc";
+import ShareChallenge from "./ShareChallenge";
 
-export default function Calculator({ exerciseName, ratios }) {
+export default function Calculator({ exerciseName, ratios, slug, challenge }) {
   const [bodyweight, setBodyweight] = useState("");
   const [weight, setWeight] = useState("");
   const [reps, setReps] = useState("5");
@@ -151,6 +152,18 @@ export default function Calculator({ exerciseName, ratios }) {
             <div className="mt-3 text-sm text-ink/70">
               Add your bodyweight above to see your strength tier.
             </div>
+          )}
+
+          {bw && tierInfo && (
+            <ShareChallenge
+              exerciseName={exerciseName}
+              slug={slug}
+              estimated1RM={estimated1RM}
+              unit={unit}
+              tierLabel={tierInfo.tier}
+              ratio={tierInfo.ratio}
+              challenge={challenge}
+            />
           )}
         </div>
       )}

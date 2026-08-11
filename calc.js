@@ -59,3 +59,13 @@ export function buildTierTable(bodyweight, ratios) {
     ratio: ratios[key],
   }));
 }
+
+// Unit conversion for challenge links — a challenge created in kg needs to
+// compare correctly against a friend calculating in lb, and vice versa.
+export function lbToKg(lb) {
+  return lb / 2.20462;
+}
+
+export function kgToLb(kg) {
+  return kg * 2.20462;
+}

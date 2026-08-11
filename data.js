@@ -791,6 +791,272 @@ const exercises = [
     ],
     relatedSlugs: ["deadlift", "sumo-deadlift"],
   },
+  {
+    slug: "shoulder-press",
+    name: "Shoulder Press",
+    category: "Push",
+    equipment: "Barbell / Dumbbell",
+    intro:
+      "Shoulder press — also called overhead press — means pressing weight straight overhead, either standing or seated, with a barbell or dumbbells. It's one of the clearest tests of raw shoulder and triceps strength there is, and unlike bench press, there's no bench or leg drive to help you cheat the number.",
+    muscles: "Front and side delts do most of the work, with triceps finishing the lockout and your core and upper back stabilizing the weight overhead.",
+    formNote:
+      "Standing overhead press asks a lot of your core to keep the weight from pulling you backward — if you're arching hard through your lower back to get the bar up, the weight is ahead of what your strict form can handle yet.",
+    ratios: {
+      men: { beginner: 0.35, novice: 0.5, intermediate: 0.75, advanced: 1.1, elite: 1.4 },
+      women: { beginner: 0.2, novice: 0.3, intermediate: 0.45, advanced: 0.65, elite: 0.85 },
+    },
+    variantNote:
+      "Standing barbell press, seated barbell press, and dumbbell press all produce different numbers for the same lifter — seated versions remove some core/leg stabilization, and dumbbells add independent-arm demand.",
+    variations: [
+      { name: "Standing barbell overhead press", note: "The strictest version — no bench, no leg drive, full-body stability required." },
+      { name: "Seated barbell shoulder press", note: "Removes leg and lower-back stabilization, isolating the shoulders more." },
+      { name: "Standing dumbbell shoulder press", note: "Independent arms add stabilizer demand — expect a lower number than barbell." },
+      { name: "Seated dumbbell shoulder press", note: "A common gym default — controlled, less core demand than standing." },
+      { name: "Push press", note: "Uses leg drive to help launch the weight — a different, more explosive movement." },
+    ],
+    faqs: [
+      {
+        q: "How much should I shoulder press?",
+        a: "Bodyweight for a clean standing press is a strong benchmark most lifters take years to reach. Use the calculator above with your own numbers for a tier that reflects your actual training, not a flat guess.",
+      },
+      {
+        q: "Shoulder press vs overhead press, are they the same thing?",
+        a: "Yes, these names are used interchangeably for the same movement — pressing weight straight overhead. Some gyms and coaches use 'overhead press' specifically for the strict standing barbell version.",
+      },
+      {
+        q: "Is my shoulder press good?",
+        a: "Half your bodyweight for a clean standing press is a solid intermediate marker for most lifters — this is a harder lift to build relative strength on than bench press, so don't compare the two numbers directly.",
+      },
+      {
+        q: "Standing vs seated shoulder press, which is stronger?",
+        a: "Most lifters press somewhat more seated, since the bench removes the core and leg stabilization standing press demands. Neither is 'wrong' — just be consistent about which one you're testing.",
+      },
+      {
+        q: "Dumbbell shoulder press vs barbell, how much less?",
+        a: "Expect noticeably less total weight with dumbbells, since stabilizing two independent weights overhead is significantly harder than a fixed bar path.",
+      },
+      {
+        q: "What muscles does shoulder press work?",
+        a: "Primarily your front and side deltoids, with triceps handling the lockout and your upper back and core working hard just to keep you stable under the weight.",
+      },
+      {
+        q: "Why is my shoulder press so much weaker than my bench press?",
+        a: "This is completely normal — shoulder press removes the mechanical advantages bench press gives you (a stable bench, shorter effective range for many lifters, and no need to stabilize the weight against gravity pulling you back). A shoulder press around half your bench is common.",
+      },
+      {
+        q: "What's a good shoulder press for beginners?",
+        a: "Focus on strict form and a full lockout before adding weight — pressing with your lower back rather than your shoulders is the most common beginner mistake, and it's easy to hide with momentum.",
+      },
+    ],
+    relatedSlugs: ["bench-press", "incline-bench-press"],
+  },
+  {
+    slug: "pull-up",
+    name: "Pull-Up",
+    category: "Pull",
+    equipment: "Bodyweight / Weighted",
+    intro:
+      "Pull-up, palms facing away, is one of the purest tests of relative upper-body strength — no machine, no adjustable resistance, just your bodyweight (and any extra weight you add) against gravity. This calculator is built around weighted pull-ups: enter the added weight beyond your bodyweight, not your total bodyweight.",
+    muscles: "Lats do most of the pulling, with biceps, rear delts, and grip strength all playing a real supporting role.",
+    formNote:
+      "A full rep means a true dead hang at the bottom and your chin clearing the bar at the top — partial-range pull-ups inflate the number but don't reflect the same strength standard.",
+    ratios: {
+      men: { beginner: 0.05, novice: 0.15, intermediate: 0.3, advanced: 0.55, elite: 0.85 },
+      women: { beginner: 0.0, novice: 0.05, intermediate: 0.15, advanced: 0.3, elite: 0.5 },
+    },
+    variantNote:
+      "This calculator treats 'weight lifted' as added weight beyond bodyweight, not your total bodyweight — enter 0 if you're not using a weight belt and just training strict bodyweight reps.",
+    variations: [
+      { name: "Assisted pull-ups", note: "Uses a band or machine to reduce effective bodyweight — a common way to build toward a first strict rep." },
+      { name: "Neutral grip pull-up", note: "Palms facing each other — often easier on the shoulders and wrists." },
+      { name: "Wide grip pull-up", note: "Emphasizes the lats more, typically the hardest grip variation." },
+      { name: "Scapula pull-up", note: "A partial-range drill focused on shoulder blade control, not a strength test." },
+      { name: "Australian pull-up (inverted row)", note: "A horizontal, easier bodyweight row — a common beginner regression." },
+    ],
+    faqs: [
+      {
+        q: "How much weight should I add to pull-ups?",
+        a: "If you can already do 8-10 strict bodyweight pull-ups comfortably, adding 10-15% of your bodyweight is a reasonable starting point for weighted work. Use the calculator above once you have a real weighted set to test.",
+      },
+      {
+        q: "Is my pull-up strength good?",
+        a: "Being able to do a single strict bodyweight pull-up already puts you ahead of a large share of gym-goers. Adding meaningful weight — 25%+ of your bodyweight for a clean rep — is a genuinely strong marker.",
+      },
+      {
+        q: "Chin up vs pull up, what's the difference?",
+        a: "Pull-ups use an overhand, palms-away grip and emphasize the lats more. Chin-ups use an underhand, palms-toward-you grip and bring the biceps in more — most people find chin-ups slightly easier for the same bodyweight.",
+      },
+      {
+        q: "How do I do my first pull-up?",
+        a: "Assisted pull-up machines, resistance bands looped over the bar, and negative reps (jumping to the top and lowering slowly) are the three most common paths to a first strict rep.",
+      },
+      {
+        q: "What's a good number of pull-ups for my bodyweight?",
+        a: "This calculator is built for weighted pull-ups specifically — if you're doing bodyweight-only reps, aim to build toward 10+ strict reps before adding external weight.",
+      },
+      {
+        q: "Neutral grip vs wide grip pull-ups, which is easier?",
+        a: "Neutral grip (palms facing each other) is generally the easiest on the joints and often lets people do more reps. Wide grip is usually the hardest and most lat-focused.",
+      },
+      {
+        q: "How do I add weight to pull-ups?",
+        a: "A dip belt with a weight plate hanging from a chain is the standard method, though a weighted vest or holding a dumbbell between your feet both work as alternatives.",
+      },
+    ],
+    relatedSlugs: ["chin-up", "barbell-row"],
+  },
+  {
+    slug: "chin-up",
+    name: "Chin-Up",
+    category: "Pull",
+    equipment: "Bodyweight / Weighted",
+    intro:
+      "Chin-up uses an underhand grip, palms facing you, which brings the biceps into the movement more than a standard pull-up. Most lifters find chin-ups noticeably easier for the same bodyweight — a real, measurable difference, not just a preference.",
+    muscles: "Lats and biceps share the load more evenly here than in a pull-up, with the same rear-delt and grip involvement.",
+    formNote:
+      "Same standard as pull-ups — full dead hang at the bottom, chin clearly over the bar at the top. It's easy to shorten the range on chin-ups without noticing, since the underhand grip makes partial reps feel deceptively complete.",
+    ratios: {
+      men: { beginner: 0.05, novice: 0.2, intermediate: 0.35, advanced: 0.6, elite: 0.9 },
+      women: { beginner: 0.0, novice: 0.05, intermediate: 0.2, advanced: 0.35, elite: 0.55 },
+    },
+    variantNote:
+      "Like the pull-up calculator, 'weight lifted' here means added weight beyond bodyweight — enter 0 for strict bodyweight reps with no belt.",
+    variations: [
+      { name: "Close-grip chin-up", note: "Hands closer together — shifts even more emphasis onto the biceps." },
+      { name: "Wide-grip chin-up", note: "Less common — brings it closer to a pull-up in muscle emphasis." },
+      { name: "Assisted chin-up", note: "Band or machine-assisted version for building toward a first strict rep." },
+      { name: "L-sit chin-up", note: "Legs held straight out — adds a real core demand on top of the pull." },
+    ],
+    faqs: [
+      {
+        q: "How much should I weighted chin-up?",
+        a: "Chin-ups typically allow slightly more added weight than pull-ups for the same lifter, since the biceps contribute more. Use the calculator above once you have a real weighted set to test.",
+      },
+      {
+        q: "Chin-ups vs pull-ups, which builds more strength?",
+        a: "Both are excellent — chin-ups tend to let you handle more weight and reps due to bicep involvement, while pull-ups place slightly more isolated demand on the lats. Many lifters train both.",
+      },
+      {
+        q: "Is my chin-up strength good?",
+        a: "10+ strict bodyweight chin-ups is a solid marker most dedicated lifters can reach with consistent training. Adding real weight beyond that — 30%+ of bodyweight for a clean rep — is genuinely strong.",
+      },
+      {
+        q: "How many chin-ups should a beginner be able to do?",
+        a: "Even one or two strict, full-range reps is a fair beginner starting point — a huge share of people, even fit ones, can't do a single strict chin-up without some training first.",
+      },
+      {
+        q: "Why can I do more chin-ups than pull-ups?",
+        a: "This is completely normal and expected — the underhand grip lets your biceps assist the lats more directly, which is why almost everyone can do more reps chin-up style at the same bodyweight.",
+      },
+    ],
+    relatedSlugs: ["pull-up", "barbell-row"],
+  },
+  {
+    slug: "barbell-row",
+    name: "Barbell Row",
+    category: "Pull",
+    equipment: "Barbell",
+    intro:
+      "Barbell row, bent over at the hips, pulling the bar to your torso — a foundational back-thickness exercise and one of the best barbell tests of pulling strength that isn't a deadlift. Form matters more here than almost any other row variation, since a bad hip hinge under load is a common way people tweak their lower back.",
+    muscles: "Lats and upper back do the primary pulling, with biceps, rear delts, and grip assisting throughout.",
+    formNote:
+      "Keep your hips hinged and torso angle steady through the set — using your legs to heave the bar up (turning it into a mini deadlift) is a common way lifters inflate the number without actually rowing more weight.",
+    ratios: {
+      men: { beginner: 0.5, novice: 0.75, intermediate: 1.0, advanced: 1.4, elite: 1.8 },
+      women: { beginner: 0.3, novice: 0.45, intermediate: 0.65, advanced: 0.9, elite: 1.2 },
+    },
+    variantNote:
+      "Pendlay rows (dead-stop from the floor each rep) and standard bent-over rows (continuous tension) are different enough in style that numbers between the two aren't directly comparable.",
+    variations: [
+      { name: "Pendlay row", note: "Bar returns to the floor each rep — more explosive, no stretch reflex to rely on." },
+      { name: "Yates row", note: "More upright torso, underhand grip — shifts emphasis toward the lower lats and biceps." },
+      { name: "Reverse grip barbell row", note: "Underhand grip, similar to Yates row — often allows slightly more weight." },
+      { name: "Smith machine barbell row", note: "Fixed vertical path, removes some balance demand." },
+      { name: "Chest-supported row", note: "A bench removes lower-back involvement entirely — different exercise, different standards." },
+    ],
+    faqs: [
+      {
+        q: "How much should I barbell row?",
+        a: "Bodyweight for a clean set of 8 with good hip-hinge form is a solid intermediate marker. Use the calculator above with your own numbers for a more precise read.",
+      },
+      {
+        q: "Is my barbell row good?",
+        a: "Compare it to your deadlift — a barbell row somewhere around 50-65% of your deadlift is a reasonable, well-balanced ratio for most lifters.",
+      },
+      {
+        q: "What's proper barbell row form?",
+        a: "Hinge at the hips with a flat back, let the bar hang at arm's length, then pull it to your lower ribs or upper stomach without your torso swinging up to help. The angle of your torso should stay roughly constant through the set.",
+      },
+      {
+        q: "Barbell row muscles worked — what does it actually train?",
+        a: "Primarily your lats and the muscles across your upper and mid back, with real secondary work for your biceps, rear delts, and grip strength.",
+      },
+      {
+        q: "Pendlay row vs regular barbell row, what's the difference?",
+        a: "Pendlay rows reset the bar to the floor every rep, removing momentum and forcing each pull to start from a dead stop. Regular bent-over rows keep continuous tension and typically let you move slightly more total weight.",
+      },
+      {
+        q: "What grip should I use for barbell row — overhand or underhand?",
+        a: "Overhand (pronated) grip emphasizes the upper back more; underhand (supinated, like a Yates row) brings in more biceps and often allows a bit more weight. Both are valid — many lifters rotate between them.",
+      },
+      {
+        q: "Barbell row on a Smith machine — does it work as well?",
+        a: "It removes some of the balance and core-stability demand of free-weight rowing, which some lifters actually prefer if lower-back fatigue is limiting their rowing weight otherwise.",
+      },
+    ],
+    relatedSlugs: ["deadlift", "lat-pulldown"],
+  },
+  {
+    slug: "lat-pulldown",
+    name: "Lat Pulldown",
+    category: "Pull",
+    equipment: "Machine",
+    intro:
+      "Lat pulldown is the seated cable machine version of a pull-up — same pulling pattern, but you're pulling the bar down to you instead of pulling your bodyweight up. It's the standard entry point for building pulling strength before attempting real pull-ups, and it stays useful even for lifters who can already do weighted pull-ups.",
+    muscles: "Lats are the primary target, with biceps, rear delts, and mid-back assisting through the pull.",
+    formNote:
+      "Lean back only slightly, and pull with your elbows driving down and back rather than just curling the bar toward your face — this is the most common way people turn a lat exercise into an arm exercise without meaning to.",
+    ratios: {
+      men: { beginner: 0.5, novice: 0.8, intermediate: 1.1, advanced: 1.5, elite: 1.9 },
+      women: { beginner: 0.35, novice: 0.55, intermediate: 0.8, advanced: 1.1, elite: 1.4 },
+    },
+    variantNote:
+      "Wide grip, neutral grip, and single-arm lat pulldown all shift the emphasis and the number slightly — wide grip is usually the hardest, neutral grip often allows the most weight.",
+    variations: [
+      { name: "Wide grip lat pulldown", note: "Emphasizes the outer lats more — typically the hardest grip to move weight on." },
+      { name: "Neutral grip lat pulldown", note: "Palms facing each other — often the strongest and most shoulder-friendly grip." },
+      { name: "Single-arm lat pulldown", note: "Unilateral version, useful for fixing left-right imbalances." },
+      { name: "Straight-arm pulldown", note: "Arms stay nearly straight — isolates the lats without much bicep involvement, different exercise entirely." },
+      { name: "Close-grip lat pulldown", note: "Hands closer together on a V-bar attachment — more bicep and lower-lat emphasis." },
+    ],
+    faqs: [
+      {
+        q: "How much should I lat pulldown?",
+        a: "Bodyweight on the stack for a clean set of 8-10 is a solid intermediate marker for most lifters. Use the calculator above with your own numbers — machine stack calibration varies enough between gyms that flat benchmarks aren't very reliable.",
+      },
+      {
+        q: "Is my lat pulldown weight good compared to my pull-ups?",
+        a: "If you can lat pulldown noticeably more than your bodyweight but still can't do a strict pull-up, that's a common and normal gap — the pulldown lets you train the same muscles without needing to move your full bodyweight yet.",
+      },
+      {
+        q: "Wide grip vs close grip lat pulldown — which is better?",
+        a: "Wide grip emphasizes the outer lats and is usually the hardest to load heavy. Close or neutral grip typically allows more weight and brings in more biceps. Neither is strictly better — they train the muscle slightly differently.",
+      },
+      {
+        q: "Lat pulldown vs pull up, which should I do?",
+        a: "Lat pulldown is a great way to build volume and strength toward pull-ups, especially for people who can't yet do a strict bodyweight rep. Once you can pull-up comfortably, both remain useful — pulldown for volume, pull-ups for the harder relative-strength test.",
+      },
+      {
+        q: "What's a good lat pulldown weight for beginners?",
+        a: "Start light enough to control the full range and really feel your lats working, rather than yanking the weight down with momentum — this is one of the easiest machines to load too heavy too fast.",
+      },
+      {
+        q: "Straight arm pulldown — is it the same exercise?",
+        a: "No — straight-arm pulldown keeps your arms nearly locked and pulls from the shoulder, isolating the lats without much bicep help. It's a different, lighter-loaded exercise, not a variation of standard lat pulldown.",
+      },
+    ],
+    relatedSlugs: ["barbell-row", "pull-up"],
+  },
 ];
 
 export default exercises;
