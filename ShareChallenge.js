@@ -1,8 +1,11 @@
 import { useState, useMemo, useRef } from "react";
+import QRCode from "qrcode";
 import { lbToKg, kgToLb } from "./calc";
 
 const SITE_NAME = "RepMax";
 const SITE_DOMAIN = "repmax-app.vercel.app"; // update once on a final domain
+
+const TIER_ORDER = ["Beginner", "Novice", "Intermediate", "Advanced", "Elite"];
 
 function roundRect(ctx, x, y, w, h, r) {
   ctx.beginPath();
@@ -14,7 +17,17 @@ function roundRect(ctx, x, y, w, h, r) {
   ctx.closePath();
 }
 
-function drawCard({ style, exerciseName, statValue, unit, tierLabel, ratioText }) {
+function loadImage(src) {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    img.crossOrigin = "anonymous";
+    img.onload = () => resolve(img);
+    img.onerror = reject;
+    img.src = src;
+  });
+}
+
+async function drawCard({ style, exerciseName, statValue, unit, tierLabel, ratioText, pageUrl }) {
   const size = 1080;
   const canvas = document.createElement("canvas");
   canvas.width = size;
@@ -24,6 +37,7 @@ function drawCard({ style, exerciseName, statValue, unit, tierLabel, ratioText }
   const isDark = style === "dark";
   const pad = 72;
 
+  // Background
   if (isDark) {
     ctx.fillStyle = "#201810";
     ctx.fillRect(0, 0, size, size);
@@ -40,11 +54,27 @@ function drawCard({ style, exerciseName, statValue, unit, tierLabel, ratioText }
     ctx.fillRect(0, 0, size, size);
   }
 
+  // Faded logo watermark, bottom-right, drawn before everything else so
+  // text and the QR code sit cleanly on top of it.
+  try {
+    const logo = await loadImage("/logo.png");
+    ctx.save();
+    ctx.globalAlpha = isDark ? 0.08 : 0.1;
+    const wmW = 480;
+    const wmH = wmW * (logo.height / logo.width);
+    ctx.drawImage(logo, size - wmW + 60, size - wmH + 40, wmW, wmH);
+    ctx.restore();
+  } catch (err) {
+    // watermark is decorative only — skip silently if it fails to load
+  }
+
+  // Exercise tag
   ctx.font = "600 30px monospace";
   ctx.fillStyle = isDark ? "#FFB130" : "#A3792F";
   ctx.textBaseline = "top";
   ctx.fillText(exerciseName.toUpperCase(), pad, pad);
 
+  // Tier badge
   ctx.font = "800 30px sans-serif";
   const badgeText = tierLabel;
   const badgeW = ctx.measureText(badgeText).width + 56;
@@ -66,7 +96,8 @@ function drawCard({ style, exerciseName, statValue, unit, tierLabel, ratioText }
   ctx.fillText(badgeText, badgeX + badgeW / 2, badgeY + 13);
   ctx.textAlign = "left";
 
-  const statY = size * 0.42;
+  // Big stat
+  const statY = size * 0.32;
   if (isDark) {
     const statGrad = ctx.createLinearGradient(pad, 0, pad + 500, 0);
     statGrad.addColorStop(0, "#FFB130");
@@ -83,10 +114,75 @@ function drawCard({ style, exerciseName, statValue, unit, tierLabel, ratioText }
   ctx.fillStyle = "#948B82";
   ctx.fillText(unit, pad + statWidth + 16, statY + 110);
 
+  // Ratio subtext
   ctx.font = "500 34px sans-serif";
   ctx.fillStyle = isDark ? "#EFE7DA" : "#6b6458";
   ctx.fillText(ratioText, pad, statY + 190);
 
+  // Tier progress bar — fills the space below the ratio text, shows all
+  // five tiers with the achieved ones highlighted.
+  const barY = statY + 260;
+  const barW = size - pad * 2;
+  const segGap = 10;
+  const segW = (barW - segGap * (TIER_ORDER.length - 1)) / TIER_ORDER.length;
+  const achievedIndex = TIER_ORDER.indexOf(tierLabel);
+
+  ctx.font = "600 22px monospace";
+  TIER_ORDER.forEach((label, i) => {
+    const x = pad + i * (segW + segGap);
+    const achieved = i <= achievedIndex;
+
+    if (isDark) {
+      ctx.fillStyle = achieved ? "#FFB130" : "rgba(255,255,255,0.1)";
+    } else {
+      ctx.fillStyle = achieved ? "#FF5A2E" : "rgba(0,0,0,0.08)";
+    }
+    roundRect(ctx, x, barY, segW, 16, 8);
+    ctx.fill();
+
+    ctx.fillStyle = i === achievedIndex
+      ? (isDark ? "#FFB130" : "#FF5A2E")
+      : (isDark ? "rgba(255,255,255,0.4)" : "rgba(36,28,24,0.4)");
+    ctx.textAlign = "center";
+    ctx.fillText(label.slice(0, 3).toUpperCase(), x + segW / 2, barY + 34);
+  });
+  ctx.textAlign = "left";
+
+  // QR code — links straight back to this exact calculator, so the card
+  // still drives traffic even if it's screenshotted and reshared without
+  // the original link.
+  if (pageUrl) {
+    try {
+      const qrDataUrl = await QRCode.toDataURL(pageUrl, {
+        width: 260,
+        margin: 0,
+        color: {
+          dark: isDark ? "#241C18" : "#241C18",
+          light: "#00000000",
+        },
+      });
+      const qrImg = await loadImage(qrDataUrl);
+      const qrSize = 190;
+      const qrX = size - pad - qrSize;
+      const qrY = barY + 90;
+
+      // white/dark backing so the QR stays scannable over any background
+      ctx.fillStyle = isDark ? "#2b2019" : "#ffffff";
+      roundRect(ctx, qrX - 18, qrY - 18, qrSize + 36, qrSize + 56, 20);
+      ctx.fill();
+      ctx.drawImage(qrImg, qrX, qrY, qrSize, qrSize);
+
+      ctx.font = "500 20px sans-serif";
+      ctx.fillStyle = isDark ? "#EFE7DA" : "#6b6458";
+      ctx.textAlign = "center";
+      ctx.fillText("Scan to try it", qrX + qrSize / 2, qrY + qrSize + 30);
+      ctx.textAlign = "left";
+    } catch (err) {
+      // QR generation is a nice-to-have — card still works without it
+    }
+  }
+
+  // Footer
   const footerY = size - pad - 50;
   ctx.strokeStyle = isDark ? "rgba(255,255,255,0.12)" : "rgba(0,0,0,0.1)";
   ctx.lineWidth = 2;
@@ -181,13 +277,14 @@ export default function ShareChallenge({
   const [pendingImage, setPendingImage] = useState(null); // { blob, url } once generated
 
   async function handleShare() {
-    const canvas = drawCard({
+    const canvas = await drawCard({
       style: cardStyle,
       exerciseName,
       statValue: String(estimated1RM),
       unit,
       tierLabel,
       ratioText,
+      pageUrl: typeof window !== "undefined" ? window.location.origin + window.location.pathname : null,
     });
 
     canvas.toBlob((blob) => {
