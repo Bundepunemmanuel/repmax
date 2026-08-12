@@ -223,7 +223,8 @@ export default function ShareChallenge({
   }
 
   // This runs directly inside a click handler (the "Create Link" button),
-  // so clipboard permission is granted — no intervening blocking prompt.
+  // so clipboard permission is granted immediately — no async gap before it,
+  // and no share-first race that can revoke the browser's trusted-action window.
   async function createAndCopyLink() {
     const displayName = nameInput.trim() || "A friend";
 
@@ -234,17 +235,6 @@ export default function ShareChallenge({
     url.searchParams.set("cn", displayName);
     const link = url.toString();
     const text = `I just hit ${estimated1RM}${unit} on ${exerciseName} (${tierLabel}) on RepMax. Think you can beat it?`;
-
-    // Try native share first — best experience on mobile.
-    if (navigator.share) {
-      try {
-        await navigator.share({ title: "RepMax Challenge", text, url: link });
-        setModalOpen(false);
-        return;
-      } catch (err) {
-        // fall through to clipboard/manual copy below
-      }
-    }
 
     let copied = false;
     try {
@@ -257,15 +247,30 @@ export default function ShareChallenge({
     setLinkReady({ link, text, copied });
   }
 
-  function manualCopyFallback() {
-    if (linkInputRef.current) {
-      linkInputRef.current.select();
-      linkInputRef.current.setSelectionRange(0, 99999);
+  async function shareViaApps() {
+    if (!linkReady) return;
+    if (navigator.share) {
       try {
-        document.execCommand("copy");
-        setLinkReady((prev) => ({ ...prev, copied: true }));
+        await navigator.share({
+          title: "RepMax Challenge",
+          text: linkReady.text,
+          url: linkReady.link,
+        });
       } catch (err) {
-        // no-op — text is at least selected for the person to copy manually
+        // user cancelled the native share sheet — no action needed
+      }
+    }
+  }
+
+  async function manualCopyFallback() {
+    try {
+      await navigator.clipboard.writeText(linkReady.link);
+      setLinkReady((prev) => ({ ...prev, copied: true }));
+    } catch (err) {
+      // last-resort: select the text so the person can copy it themselves
+      if (linkInputRef.current) {
+        linkInputRef.current.select();
+        linkInputRef.current.setSelectionRange(0, 99999);
       }
     }
   }
@@ -409,12 +414,22 @@ export default function ShareChallenge({
                     onClick={manualCopyFallback}
                     className="flex-shrink-0 rounded-xl bg-ink px-3 py-1.5 text-xs font-semibold text-white transition-transform active:scale-95"
                   >
-                    Copy
+                    {linkReady.copied ? "Copied ✓" : "Copy"}
                   </button>
                 </div>
+
+                {typeof navigator !== "undefined" && navigator.share && (
+                  <button
+                    onClick={shareViaApps}
+                    className="mt-3 w-full rounded-2xl border-2 border-flare py-3 text-sm font-semibold text-flare transition-transform active:scale-95"
+                  >
+                    ⤴ Share via apps
+                  </button>
+                )}
+
                 <button
                   onClick={() => setModalOpen(false)}
-                  className="mt-5 w-full rounded-2xl bg-flare py-3 text-sm font-semibold text-white transition-transform active:scale-95"
+                  className="mt-3 w-full rounded-2xl bg-flare py-3 text-sm font-semibold text-white transition-transform active:scale-95"
                 >
                   Done
                 </button>
