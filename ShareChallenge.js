@@ -178,6 +178,8 @@ export default function ShareChallenge({
     };
   }, [challenge, estimated1RM, unit]);
 
+  const [pendingImage, setPendingImage] = useState(null); // { blob, url } once generated
+
   async function handleShare() {
     const canvas = drawCard({
       style: cardStyle,
@@ -188,32 +190,45 @@ export default function ShareChallenge({
       ratioText,
     });
 
-    canvas.toBlob(async (blob) => {
+    canvas.toBlob((blob) => {
       if (!blob) return;
-      const file = new File([blob], `${slug}-repmax.png`, { type: "image/png" });
 
-      if (navigator.canShare && navigator.canShare({ files: [file] })) {
-        try {
-          await navigator.share({
-            files: [file],
-            title: `My ${exerciseName} result on RepMax`,
-            text: `${estimated1RM}${unit} on ${exerciseName} — ${tierLabel} tier.`,
-          });
-          setShareStatus("shared");
-        } catch (err) {
-          // user cancelled the native share sheet — not an error
-        }
-      } else {
-        const url = URL.createObjectURL(blob);
-        const a = document.createElement("a");
-        a.href = url;
-        a.download = `${slug}-repmax.png`;
-        a.click();
-        URL.revokeObjectURL(url);
-        setShareStatus("saved");
-      }
+      // Download immediately — this is the reliable path and doesn't
+      // depend on any browser permission window. Native share (if
+      // available) is offered as a separate, explicit follow-up tap,
+      // since calling navigator.share() from inside this async callback
+      // can silently fail if the browser already revoked the trusted
+      // user-action window by the time the image finished encoding.
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `${slug}-repmax.png`;
+      a.click();
+
+      setPendingImage({ blob, url });
+      setShareStatus("saved");
       setTimeout(() => setShareStatus(null), 3000);
     }, "image/png");
+  }
+
+  async function shareImageViaApps() {
+    if (!pendingImage) return;
+    const file = new File([pendingImage.blob], `${slug}-repmax.png`, {
+      type: "image/png",
+    });
+    if (navigator.canShare && navigator.canShare({ files: [file] })) {
+      try {
+        await navigator.share({
+          files: [file],
+          title: `My ${exerciseName} result on RepMax`,
+          text: `${estimated1RM}${unit} on ${exerciseName} — ${tierLabel} tier.`,
+        });
+        setShareStatus("shared");
+        setTimeout(() => setShareStatus(null), 3000);
+      } catch (err) {
+        // user cancelled the native share sheet — no action needed
+      }
+    }
   }
 
   function openChallengeModal() {
@@ -332,6 +347,17 @@ export default function ShareChallenge({
           {shareStatus === "saved" ? "Image saved!" : "Shared!"}
         </div>
       )}
+
+      {pendingImage &&
+        typeof navigator !== "undefined" &&
+        navigator.share && (
+          <button
+            onClick={shareImageViaApps}
+            className="mt-2 w-full rounded-2xl border-2 border-flare py-2.5 text-sm font-semibold text-flare transition-transform active:scale-95"
+          >
+            ⤴ Send saved image via apps
+          </button>
+        )}
 
       <div className="mt-3 flex items-center justify-center gap-2 text-xs text-mute">
         <span>Card style:</span>
