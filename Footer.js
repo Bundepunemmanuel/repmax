@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <footer className="mt-16 border-t border-line">
@@ -7,6 +9,9 @@ export default function Footer() {
           replacement for a coach or a real training log. Use them as a
           rough compass, not gospel.
         </p>
+        <Link href="/methodology" className="mt-2 inline-block text-xs font-medium text-flare hover:underline">
+          How these numbers are calculated →
+        </Link>
         <p className="mt-4 font-mono text-xs">
           © {new Date().getFullYear()} RepMax
         </p>

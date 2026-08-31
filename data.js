@@ -8,6 +8,7 @@ const exercises = [
     name: "Hip Thrust",
     category: "Legs & Glutes",
     equipment: "Barbell",
+    titleHook: "See Your Glute Strength Tier",
     intro:
       "The hip thrust is a barbell glute exercise done with your shoulders on a bench and the bar across your hips. It's the closest thing to a dedicated glute-strength number — most lifters find they can move a lot more weight here than on a squat or deadlift, which throws people off the first time they load the bar.",
     muscles: "Primarily glutes, with hamstrings and adductors doing real supporting work through the lockout.",
@@ -57,6 +58,7 @@ const exercises = [
     name: "Hack Squat",
     category: "Legs",
     equipment: "Machine",
+    titleHook: "How Much Should You Really Lift?",
     intro:
       "Hack squat usually means the angled sled machine, back against the pad, feet on a platform in front of you. It takes your lower back mostly out of the equation, so people who can't squat heavy due to back issues often find they can load the hack squat well past what their back squat suggests.",
     muscles: "Quad-dominant, with glutes and hamstrings assisting depending on foot placement on the platform.",
@@ -102,6 +104,7 @@ const exercises = [
     name: "Back Squat",
     category: "Legs",
     equipment: "Barbell",
+    titleHook: "Are You Stronger Than Average?",
     intro:
       "The back squat is one of the three competition powerlifts, bar on your traps or rear delts, and it's usually the first number people ask about when they want to know if someone lifts seriously. It's also one of the more technical lifts to load heavy safely — depth, bar path, and bracing all matter more here than on most other exercises.",
     muscles: "Quads and glutes primarily, with the entire posterior chain and core working to keep you upright under load.",
@@ -147,6 +150,7 @@ const exercises = [
     name: "Deadlift",
     category: "Back & Posterior Chain",
     equipment: "Barbell",
+    titleHook: "Find Your True Strength Level",
     intro:
       "Conventional deadlift, bar on the floor, pulled from a dead stop. It's usually the heaviest number in anyone's lifting log because it recruits nearly everything at once — but that also means fatigue and technique breakdown hit harder here than on any other lift.",
     muscles: "Hamstrings, glutes, and the entire back working together, with grip strength often becoming the real limiter as weight climbs.",
@@ -158,6 +162,13 @@ const exercises = [
     },
     variantNote:
       "This calculator is built around conventional deadlift. Romanian deadlift, trap bar deadlift, and stiff-leg deadlift all load differently enough that they deserve their own numbers, not a percentage of this one.",
+    comparisonSection: {
+      title: "Deadlift vs. Trap Bar Deadlift",
+      targetSlug: "trap-bar-deadlift",
+      targetName: "Trap Bar Deadlift",
+      body: "Conventional deadlift is the harder pull of the two for most lifters — a more forward torso lean and a longer effective range put more direct demand on your lower back and hip hinge than trap bar's more centered, upright setup does.",
+      guideline: "If you're deadlifting conventional and curious what trap bar might feel like, expect the number to move up somewhat for most lifters, not down — the leverage genuinely is more forgiving.",
+    },
     faqs: [
       {
         q: "How much should I deadlift?",
@@ -196,6 +207,7 @@ const exercises = [
     name: "Bench Press",
     category: "Push",
     equipment: "Barbell",
+    titleHook: "Is Your Bench Actually Good?",
     intro:
       "Flat barbell bench, the default answer to 'how much do you lift' for most people who've never set foot in a powerlifting gym. It's a genuinely useful upper-body strength number, but it's also the lift people most commonly overestimate before they've actually tested it properly.",
     muscles: "Chest, front delts, and triceps, with your upper back and legs providing the stable base you're pressing off of.",
@@ -207,6 +219,13 @@ const exercises = [
     },
     variantNote:
       "This calculator is built around flat barbell bench. Incline bench, dumbbell bench, and machine chest press all produce different numbers for the same lifter — usually somewhat lower than a flat barbell max.",
+    comparisonSection: {
+      title: "Bench Press vs. Incline Bench Press",
+      targetSlug: "incline-bench-press",
+      targetName: "Incline Bench Press",
+      body: "Flat bench is the bigger number for almost everyone — it's a more mechanically favorable angle for the chest, the muscle group doing the most work in a flat press. Incline asks more of your front delts and upper chest specifically.",
+      guideline: "Expect your incline number to land around 80-85% of your flat bench. If incline is close to or higher than flat, that's unusual and worth a form check on the flat bench setup.",
+    },
     faqs: [
       {
         q: "How much should I bench?",
@@ -245,6 +264,7 @@ const exercises = [
     name: "Romanian Deadlift",
     category: "Back & Posterior Chain",
     equipment: "Barbell",
+    titleHook: "Know Your Real Hamstring Score",
     intro:
       "Romanian deadlift starts from the top, bar at hip height, and lowers with a slight knee bend until you feel a real hamstring stretch. It's a different exercise from a conventional deadlift, not a lighter version of one — the range of motion, the muscles doing the work, and the weight you should expect all differ.",
     muscles: "Hamstrings and glutes, with your lower back working isometrically to keep your spine neutral through the stretch.",
@@ -314,6 +334,7 @@ const exercises = [
     name: "Trap Bar Deadlift",
     category: "Back & Posterior Chain",
     equipment: "Trap Bar / Hex Bar",
+    titleHook: "See How You Stack Up",
     intro:
       "Trap bar deadlift (also called hex bar deadlift) uses a hexagonal bar you stand inside of, so the load sits closer to your center of gravity than a conventional deadlift. It's generally more back-friendly and lets most lifters move more weight than they can pull conventionally.",
     muscles: "Quads get more involved than in a conventional deadlift, alongside the usual glutes, hamstrings, and back.",
@@ -333,6 +354,13 @@ const exercises = [
       { name: "Banded trap bar deadlift", note: "Bands added for extra tension at lockout, common in strength programs." },
       { name: "Trap bar deadlift with dumbbells", note: "A home-gym substitute when no trap bar is available — much lighter loading." },
     ],
+    comparisonSection: {
+      title: "Trap Bar vs. Conventional Deadlift",
+      targetSlug: "deadlift",
+      targetName: "Deadlift",
+      body: "Same general pattern, different leverage. Trap bar keeps the load centered around your body and lets your torso stay more upright, which is why most lifters move more weight on trap bar than on a conventional straight-bar pull at the same relative effort.",
+      guideline: "A common rough pattern: your trap bar number tends to run somewhat higher than your conventional deadlift number for the same effort level — if yours is lower, that's more likely a technique/comfort factor than a strength gap.",
+    },
     faqs: [
       {
         q: "How much should I trap bar deadlift?",
@@ -375,6 +403,7 @@ const exercises = [
     name: "Incline Bench Press",
     category: "Push",
     equipment: "Barbell",
+    titleHook: "Know Your Upper Chest Strength",
     intro:
       "Incline bench press is done on a bench angled up, usually somewhere between 15 and 45 degrees, shifting more emphasis onto the upper chest and front delts. It's a staple for anyone who's noticed their flat bench outpacing their upper-chest development.",
     muscles: "Upper chest and front delts take on more of the load compared to flat bench, with triceps still finishing the lockout.",
@@ -393,6 +422,13 @@ const exercises = [
       { name: "Hammer strength incline press", note: "Plate-loaded machine version — independent arms, fixed path." },
       { name: "Seated incline press", note: "Often refers to a shoulder-focused machine variant, not the barbell lift." },
     ],
+    comparisonSection: {
+      title: "Incline vs. Flat Bench Press",
+      targetSlug: "bench-press",
+      targetName: "Bench Press",
+      body: "Flat bench recruits more of your chest through a more favorable pressing angle, which is why it's almost always the bigger number of the two. Incline shifts real work onto your front delts and upper chest — muscles that usually aren't as strong as the muscles flat bench leans on.",
+      guideline: "A gap of roughly 15-20% lower on incline compared to flat is normal. If your numbers are close to identical, your upper chest and shoulders are unusually strong relative to the rest of your press — or your flat bench has room to grow.",
+    },
     faqs: [
       {
         q: "How much should I incline bench press?",
@@ -435,6 +471,7 @@ const exercises = [
     name: "Chest Press Machine",
     category: "Push",
     equipment: "Machine",
+    titleHook: "Check Your True Press Strength",
     intro:
       "Chest press machine covers the seated, fixed-path pressing machines found in most gyms — plate-loaded or selectorized, flat or angled. It's a reliable way to train pressing strength without needing a spotter, and it's often where people who are intimidated by barbell bench start.",
     muscles: "Chest and triceps primarily, with front delts assisting — the machine's fixed path removes most of the stabilizer demand a free barbell requires.",
@@ -495,6 +532,7 @@ const exercises = [
     name: "Floor Press",
     category: "Push",
     equipment: "Barbell",
+    titleHook: "See Where Your Lockout Ranks",
     intro:
       "Floor press is a bench press done lying on the floor instead of a bench, which cuts the range of motion short the moment your upper arms touch the ground. It takes the legs and lower back out of the lift entirely and puts a hard stop on the bottom of the press.",
     muscles: "Triceps and front delts get more emphasis than on a full-range bench press, since the shortened range reduces chest stretch at the bottom.",
@@ -547,6 +585,7 @@ const exercises = [
     name: "Sumo Deadlift",
     category: "Back & Posterior Chain",
     equipment: "Barbell",
+    titleHook: "Find Your Pulling Strength Tier",
     intro:
       "Sumo deadlift uses a wide stance with your hands gripping inside your knees, keeping your torso more upright than a conventional pull. It shifts more of the work to your quads and hips, and a lot of lifters — especially those with longer arms or a shorter torso — end up pulling more weight sumo than conventional.",
     muscles: "Quads and glutes take on more of the load than in conventional deadlift, with the more upright torso reducing lower-back demand.",
@@ -608,6 +647,7 @@ const exercises = [
     name: "Stiff-Leg Deadlift",
     category: "Back & Posterior Chain",
     equipment: "Barbell",
+    titleHook: "Test Your Hamstring Power",
     intro:
       "Stiff-leg deadlift keeps your knees nearly locked throughout the movement, starting from the floor rather than hip height like a Romanian deadlift. That small difference — floor start, straighter legs — makes it a more demanding hamstring stretch and a different exercise from RDLs, even though people often use the names interchangeably.",
     muscles: "Hamstrings and lower back get the most direct load, with glutes assisting through the hip extension at the top.",
@@ -661,6 +701,7 @@ const exercises = [
     name: "Decline Bench Press",
     category: "Push",
     equipment: "Barbell",
+    titleHook: "See Your Lower Chest Strength",
     intro:
       "Decline bench press is done on a bench angled downward, head lower than hips, shifting emphasis to the lower chest. It's the least common of the three bench angles, but a real strength number in its own right — and for a lot of lifters, it's actually the easiest angle to move the most weight on.",
     muscles: "Lower chest gets the most direct emphasis, with triceps still doing significant work through lockout.",
@@ -713,6 +754,7 @@ const exercises = [
     name: "Dumbbell Bench Press",
     category: "Push",
     equipment: "Dumbbell",
+    titleHook: "Are You Stronger With Dumbbells?",
     intro:
       "Flat dumbbell bench press — same lying position as barbell bench, but with two independent weights instead of a fixed bar. The lack of a fixed bar path means your stabilizer muscles do a lot more work, which is exactly why most lifters can't move as much total weight here as they can on barbell.",
     muscles: "Chest, front delts, and triceps, same as barbell bench, with more stabilizer demand from the shoulders and core to control two independent weights.",
@@ -769,6 +811,7 @@ const exercises = [
     name: "Snatch-Grip Deadlift",
     category: "Back & Posterior Chain",
     equipment: "Barbell",
+    titleHook: "Check Your Upper Back Strength",
     intro:
       "Snatch-grip deadlift uses a much wider grip than conventional deadlift, close to what an Olympic snatch requires. The wider grip increases the range of motion significantly, which makes this a harder pull than conventional deadlift at the same weight — expect a real drop in your numbers the first time you try it.",
     muscles: "Upper back and traps get significantly more work than conventional deadlift, alongside the usual hamstrings, glutes, and grip demand.",
@@ -811,6 +854,7 @@ const exercises = [
     name: "Shoulder Press",
     category: "Push",
     equipment: "Barbell / Dumbbell",
+    titleHook: "Is Your Overhead Press Strong?",
     intro:
       "Shoulder press — also called overhead press — means pressing weight straight overhead, either standing or seated, with a barbell or dumbbells. It's one of the clearest tests of raw shoulder and triceps strength there is, and unlike bench press, there's no bench or leg drive to help you cheat the number.",
     muscles: "Front and side delts do most of the work, with triceps finishing the lockout and your core and upper back stabilizing the weight overhead.",
@@ -871,6 +915,7 @@ const exercises = [
     name: "Pull-Up",
     category: "Pull",
     equipment: "Bodyweight / Weighted",
+    titleHook: "How Many Should You Really Do?",
     intro:
       "Pull-up, palms facing away, is one of the purest tests of relative upper-body strength — no machine, no adjustable resistance, just your bodyweight (and any extra weight you add) against gravity. This calculator is built around weighted pull-ups: enter the added weight beyond your bodyweight, not your total bodyweight.",
     muscles: "Lats do most of the pulling, with biceps, rear delts, and grip strength all playing a real supporting role.",
@@ -889,6 +934,13 @@ const exercises = [
       { name: "Scapula pull-up", note: "A partial-range drill focused on shoulder blade control, not a strength test." },
       { name: "Australian pull-up (inverted row)", note: "A horizontal, easier bodyweight row — a common beginner regression." },
     ],
+    comparisonSection: {
+      title: "Lat Pulldown vs. Pull-Up",
+      targetSlug: "lat-pulldown",
+      targetName: "Lat Pulldown",
+      body: "Lat pulldown and pull-up train the same movement pattern, but pulldown lets you go lighter than your bodyweight while pull-up doesn't — you're always moving your full bodyweight at minimum. That's why a lot of people can pull down more on the stack than they can technically lift bodyweight on a bar: the pulldown never asked them to handle their own weight in the first place.",
+      guideline: "As a rough guide, if you can lat pulldown around 100% of your bodyweight for a controlled set of 8, you're in the range where a first strict bodyweight pull-up becomes realistic with focused training.",
+    },
     faqs: [
       {
         q: "How much weight should I add to pull-ups?",
@@ -927,6 +979,7 @@ const exercises = [
     name: "Chin-Up",
     category: "Pull",
     equipment: "Bodyweight / Weighted",
+    titleHook: "See Your Real Pulling Power",
     intro:
       "Chin-up uses an underhand grip, palms facing you, which brings the biceps into the movement more than a standard pull-up. Most lifters find chin-ups noticeably easier for the same bodyweight — a real, measurable difference, not just a preference.",
     muscles: "Lats and biceps share the load more evenly here than in a pull-up, with the same rear-delt and grip involvement.",
@@ -974,6 +1027,7 @@ const exercises = [
     name: "Barbell Row",
     category: "Pull",
     equipment: "Barbell",
+    titleHook: "Check Your Back Strength Tier",
     intro:
       "Barbell row, bent over at the hips, pulling the bar to your torso — a foundational back-thickness exercise and one of the best barbell tests of pulling strength that isn't a deadlift. Form matters more here than almost any other row variation, since a bad hip hinge under load is a common way people tweak their lower back.",
     muscles: "Lats and upper back do the primary pulling, with biceps, rear delts, and grip assisting throughout.",
@@ -1030,6 +1084,7 @@ const exercises = [
     name: "Lat Pulldown",
     category: "Pull",
     equipment: "Machine",
+    titleHook: "Are You Pulling Your Weight?",
     intro:
       "Lat pulldown is the seated cable machine version of a pull-up — same pulling pattern, but you're pulling the bar down to you instead of pulling your bodyweight up. It's the standard entry point for building pulling strength before attempting real pull-ups, and it stays useful even for lifters who can already do weighted pull-ups.",
     muscles: "Lats are the primary target, with biceps, rear delts, and mid-back assisting through the pull.",
@@ -1048,6 +1103,13 @@ const exercises = [
       { name: "Straight-arm pulldown", note: "Arms stay nearly straight — isolates the lats without much bicep involvement, different exercise entirely." },
       { name: "Close-grip lat pulldown", note: "Hands closer together on a V-bar attachment — more bicep and lower-lat emphasis." },
     ],
+    comparisonSection: {
+      title: "Lat Pulldown vs. Pull-Up",
+      targetSlug: "pull-up",
+      targetName: "Pull-Up",
+      body: "Pulldown and pull-up train the same muscles through the same pattern, but pull-up has a hard floor: your full bodyweight, every rep, no way to go lighter. That's the whole reason pulldown exists as a stepping stone — it lets you build the same strength without that floor.",
+      guideline: "If your lat pulldown is still well under your own bodyweight for a clean set of 8, that's a fair sign a strict pull-up isn't quite there yet — keep building the pulldown number up first.",
+    },
     faqs: [
       {
         q: "How much should I lat pulldown?",

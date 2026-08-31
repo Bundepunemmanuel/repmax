@@ -69,3 +69,23 @@ export function lbToKg(lb) {
 export function kgToLb(kg) {
   return kg * 2.20462;
 }
+
+// Reference bodyweights used for the static standards table. These are
+// computed at build time (via getStaticProps) so the actual numbers exist
+// in the crawlable HTML, unlike the interactive calculator's tier table,
+// which only renders after a user enters their own bodyweight client-side.
+const REFERENCE_BODYWEIGHTS_LB = [120, 140, 160, 180, 200, 220];
+
+export function buildStandardsTable(ratios) {
+  return REFERENCE_BODYWEIGHTS_LB.map((bw) => ({
+    bodyweight: bw,
+    men: TIER_ORDER.map((key) => ({
+      label: TIER_LABELS[key],
+      weight: Math.round(ratios.men[key] * bw),
+    })),
+    women: TIER_ORDER.map((key) => ({
+      label: TIER_LABELS[key],
+      weight: Math.round(ratios.women[key] * bw),
+    })),
+  }));
+}
