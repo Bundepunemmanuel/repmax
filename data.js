@@ -28,6 +28,13 @@ const exercises = [
       title: "Average Hip Thrust Weight by Bodyweight",
       body: "Average hip thrust weight tends to run higher relative to bodyweight than almost any other lower-body exercise — the short range and strong leverage let most lifters move more weight here than on squat or deadlift, so don't be surprised if your hip thrust outpaces both.",
     },
+    isFlagship: true,
+    commonMistakes: [
+        "Hyperextending the lower back at the top instead of finishing the movement with the glutes.",
+        "Letting the bar roll away from the hips mid-set, changing the leverage without you noticing.",
+        "Stopping short of full hip extension at the top, which shortchanges the rep.",
+      ],
+    workedExample: { bodyweight: 180, weight: 225, reps: 8 },
     faqs: [
       {
         q: "How much should I hip thrust?",
@@ -185,6 +192,13 @@ const exercises = [
       title: "Average Deadlift Weight by Bodyweight",
       body: "Across the general lifting population, most untrained adults deadlift well under their own bodyweight on a first honest attempt. A year or so of consistent training tends to land people around bodyweight to 1.25x bodyweight — meaningfully below the 'advanced' tier most people picture when they think of a strong deadlift.",
     },
+    isFlagship: true,
+    commonMistakes: [
+        "Letting the bar drift away from your shins as it comes up — the single biggest form breakdown as weight increases.",
+        "Rounding the lower back to force the bar off the floor instead of resetting your position.",
+        "Hyperextending at the lockout instead of stopping at a neutral standing position.",
+      ],
+    workedExample: { bodyweight: 180, weight: 315, reps: 3 },
     faqs: [
       {
         q: "How does a deadlift max calculator actually work?",
@@ -308,6 +322,21 @@ const exercises = [
       { name: "Landmine RDL", note: "Bar anchored at one end — shorter arc, often gentler on the lower back." },
       { name: "Banded / resistance-band RDL", note: "A common bodyweight-at-home version when there's no bar available." },
     ],
+    repRangeGuidance: {
+      title: "Romanian Deadlift Rep Range",
+      body: "6-10 reps is the most common range, since RDL is typically trained for hamstring and glute development rather than pure max strength. Going much heavier for lower reps increases the temptation to round the back, which is the main risk on this lift.",
+    },
+    averageSection: {
+      title: "Average Romanian Deadlift Weight by Bodyweight",
+      body: "Most lifters use 60-75% of their conventional deadlift weight for Romanian deadlift. A lifter who conventional deadlifts around bodyweight might expect an RDL number closer to 0.6-0.75x bodyweight, not a matching number.",
+    },
+    isFlagship: true,
+    commonMistakes: [
+        "Bending the knees too much and turning the movement into a partial conventional deadlift instead of a hip hinge.",
+        "Rounding the lower back to reach further down than your hamstring flexibility actually allows.",
+        "Letting the bar drift away from the legs, the same issue that hurts conventional deadlift form.",
+      ],
+    workedExample: { bodyweight: 180, weight: 155, reps: 8 },
     faqs: [
       {
         q: "How much should I Romanian deadlift?",
@@ -385,6 +414,21 @@ const exercises = [
       body: "Same general pattern, different leverage. Trap bar keeps the load centered around your body and lets your torso stay more upright, which is why most lifters move more weight on trap bar than on a conventional straight-bar pull at the same relative effort.",
       guideline: "A common rough pattern: your trap bar number tends to run somewhat higher than your conventional deadlift number for the same effort level — if yours is lower, that's more likely a technique/comfort factor than a strength gap.",
     },
+    repRangeGuidance: {
+      title: "Trap Bar Deadlift Rep Range",
+      body: "3-5 reps at a heavy weight is the standard range for building or testing max strength on trap bar. Because the more upright torso position is easier on the lower back than conventional deadlift, some lifters can also handle slightly higher rep ranges (6-8) here without the same fatigue cost.",
+    },
+    averageSection: {
+      title: "Average Trap Bar Deadlift Weight by Bodyweight",
+      body: "Trap bar deadlift standards typically run a bit higher than conventional deadlift for the same lifter, thanks to the more favorable leverage. Most lifters with a year of training land somewhere around bodyweight to 1.5x bodyweight on trap bar.",
+    },
+    isFlagship: true,
+    commonMistakes: [
+        "Squatting the weight up instead of hinging — trap bar allows more knee bend than conventional deadlift, but it's still primarily a hip-hinge movement.",
+        "Standing with poor foot positioning inside the handles, which changes the bar path unpredictably.",
+        "Not keeping the bar close to your body throughout the pull.",
+      ],
+    workedExample: { bodyweight: 180, weight: 275, reps: 5 },
     faqs: [
       {
         q: "How much should I trap bar deadlift?",
@@ -691,6 +735,21 @@ const exercises = [
       { name: "Kettlebell stiff-leg deadlift", note: "Lighter loading, often used for higher-rep hamstring work." },
       { name: "Trap bar stiff-leg deadlift", note: "Neutral grip version, sometimes more comfortable on the lower back." },
     ],
+    repRangeGuidance: {
+      title: "Stiff-Leg Deadlift Rep Range",
+      body: "8-10 reps at a controlled, moderate weight is the typical range — this lift is about hamstring stretch and time under tension more than heavy loading, so very low rep maxes are less common here than on conventional deadlift.",
+    },
+    averageSection: {
+      title: "Average Stiff-Leg Deadlift Weight by Bodyweight",
+      body: "Expect a lower number than both conventional deadlift and Romanian deadlift, since the straighter-leg, floor-start position increases the hamstring demand the most of the three. Roughly half bodyweight is a reasonable intermediate marker.",
+    },
+    isFlagship: true,
+    commonMistakes: [
+        "Locking the knees completely instead of keeping a slight bend, which increases strain without adding benefit.",
+        "Going lower than your hamstring flexibility allows, causing the lower back to round to reach the floor.",
+        "Rushing the eccentric (lowering) portion instead of controlling it, which is where most of the hamstring benefit actually comes from.",
+      ],
+    workedExample: { bodyweight: 180, weight: 135, reps: 8 },
     faqs: [
       {
         q: "How much should I stiff-leg deadlift?",
@@ -744,6 +803,21 @@ const exercises = [
       { name: "Decline smith machine press", note: "Vertical fixed path — a middle ground between free weight and machine." },
       { name: "Decline hammer press", note: "Plate-loaded machine version with independent arm movement." },
     ],
+    repRangeGuidance: {
+      title: "Decline Bench Press Rep Range",
+      body: "3-5 reps at a heavy weight works well for strength testing, since decline typically allows the heaviest loading of the three bench angles. 8-12 reps is a solid range for building lower chest size once you're not chasing a max.",
+    },
+    averageSection: {
+      title: "Average Decline Bench Press Weight by Bodyweight",
+      body: "Decline bench tends to be the highest of the three bench numbers (flat, incline, decline) for most lifters, given the shorter effective range and favorable joint angle. Expect it to run somewhat above your flat bench number, not below it.",
+    },
+    isFlagship: true,
+    commonMistakes: [
+        "Not securing your legs or feet under the pads, which risks sliding during a heavy rep.",
+        "Bouncing the bar off the chest at the bottom instead of controlling the descent.",
+        "Flaring the elbows too wide, which stresses the shoulders more than a slight tuck would.",
+      ],
+    workedExample: { bodyweight: 180, weight: 205, reps: 6 },
     faqs: [
       {
         q: "How much should I decline bench press?",
@@ -852,6 +926,21 @@ const exercises = [
       { name: "Snatch-grip rack pull", note: "Partial range version, starting from pins in a rack rather than the floor." },
       { name: "Snatch-grip high pull", note: "Adds an explosive pulling and shrugging phase, common in Olympic lifting prep." },
     ],
+    repRangeGuidance: {
+      title: "Snatch-Grip Deadlift Rep Range",
+      body: "Most lifters use snatch-grip deadlift as an accessory movement rather than a max-strength test, so 3-6 reps at a moderate weight — well under your conventional deadlift number — is the typical, sustainable range.",
+    },
+    averageSection: {
+      title: "Average Snatch-Grip Deadlift Weight by Bodyweight",
+      body: "Expect a noticeably lower number than conventional deadlift, since the wider grip increases the range of motion significantly. This is normal and doesn't reflect weaker overall pulling strength — it reflects a harder version of the same lift.",
+    },
+    isFlagship: true,
+    commonMistakes: [
+        "Using a grip that's too narrow, which turns this back into a conventional-style pull and defeats the point of the variation.",
+        "Rushing the setup — the increased range means your starting position matters even more than on conventional deadlift.",
+        "Rounding the upper back under the wider grip, the most common breakdown point here.",
+      ],
+    workedExample: { bodyweight: 180, weight: 185, reps: 4 },
     faqs: [
       {
         q: "How much should I snatch-grip deadlift?",
@@ -905,6 +994,13 @@ const exercises = [
       title: "Average Shoulder Press for Men and Women",
       body: "Average shoulder press for men without dedicated training is typically well under bodyweight — this is a harder lift to build relative strength on than bench press, since there's no bench or leg drive helping the number along. For women, the same pattern holds at roughly 60% of the men's benchmarks shown in the table below.",
     },
+    isFlagship: true,
+    commonMistakes: [
+        "Arching the lower back excessively to help the bar past your face — a sign the weight is ahead of your strict strength.",
+        "Flaring the elbows too wide, which stresses the shoulder joint more than it needs to.",
+        "Not fully locking out overhead — stopping short inflates the number without completing the actual lift.",
+      ],
+    workedExample: { bodyweight: 180, weight: 115, reps: 6 },
     faqs: [
       {
         q: "How much should I shoulder press?",
@@ -981,6 +1077,13 @@ const exercises = [
       title: "Average Pull-Up Numbers by Experience",
       body: "Most untrained adults can't complete a single strict pull-up — grip and relative bodyweight strength are the limiting factors early on. Once someone's trained pulling movements for 6-12 months, 5-8 strict bodyweight reps is a realistic marker. Add external weight — the actual pull-up standards this calculator is built around — and anything past 25% of your bodyweight for a clean rep puts you well ahead of the average gym-goer.",
     },
+    isFlagship: true,
+    commonMistakes: [
+        "Kipping or swinging to generate momentum — fine for CrossFit-style training, but it inflates the number if you're testing strict strength.",
+        "Not reaching a full dead hang at the bottom — partial reps make the lift easier and the number less meaningful.",
+        "Chin barely grazing the bar instead of clearing it — a real rep means your chin gets over the bar, not just close to it.",
+      ],
+    workedExample: { bodyweight: 180, weight: 25, reps: 5 },
     faqs: [
       {
         q: "Can I trust a max weighted pull up calculator?",
@@ -1166,6 +1269,13 @@ const exercises = [
       title: "Lat Pulldown Weight Stack Chart, by Bodyweight",
       body: "The table below works as a lat pulldown weight stack chart — a plain-language reference for what beginner through elite roughly looks like at a given bodyweight. Treat it as a starting compass, not gospel: two gyms' weight stacks can disagree by 10-20% even at the 'same' number on the pin.",
     },
+    isFlagship: true,
+    commonMistakes: [
+        "Leaning back too far and turning the pull into a low row instead of a lat pulldown.",
+        "Yanking the bar down with momentum rather than controlling it — easy to do on this machine specifically.",
+        "Pulling to the chest with elbows flared instead of driving elbows down and back.",
+      ],
+    workedExample: { bodyweight: 180, weight: 160, reps: 8 },
     faqs: [
       {
         q: "What's a good lat pulldown 1 rep max?",

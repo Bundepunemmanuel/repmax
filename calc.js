@@ -89,3 +89,14 @@ export function buildStandardsTable(ratios) {
     })),
   }));
 }
+
+// Training percentage breakdown — e.g. "95% of your 1RM is X lb" — used on
+// flagship pages so lifters can plan working sets, not just see their max.
+const TRAINING_PERCENTAGES = [95, 90, 85, 80, 75, 70, 65, 60];
+
+export function buildPercentageTable(referenceWeight) {
+  return TRAINING_PERCENTAGES.map((percent) => ({
+    percent,
+    weight: Math.round((referenceWeight * percent) / 100),
+  }));
+}
