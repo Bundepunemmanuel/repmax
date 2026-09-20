@@ -10,7 +10,7 @@ const exercises = [
     equipment: "Barbell",
     titleHook: "See Your Glute Strength Tier",
     intro:
-      "The hip thrust is a barbell glute exercise done with your shoulders on a bench and the bar across your hips. It's the closest thing to a dedicated glute-strength number — most lifters find they can move a lot more weight here than on a squat or deadlift, which throws people off the first time they load the bar.",
+      "This hip thrust calculator estimates your hip thrust 1 rep max and checks it against real strength standards. Hip thrust is a barbell glute exercise done with your shoulders on a bench and the bar across your hips — the closest thing to a dedicated glute-strength number, and most lifters find they can move a lot more weight here than on a squat or deadlift, which throws people off the first time they load the bar.",
     muscles: "Primarily glutes, with hamstrings and adductors doing real supporting work through the lockout.",
     formNote:
       "Lockout comes from the hips, not the lower back. If you feel it in your spine before your glutes, the weight is too heavy for your current setup or your foot placement is off.",
@@ -20,6 +20,14 @@ const exercises = [
     },
     variantNote:
       "This calculator covers the standard barbell hip thrust off a bench. Single-leg and dumbbell hip thrusts load very differently — expect roughly half the weight for a single-leg variation at the same relative difficulty.",
+    repRangeGuidance: {
+      title: "Hip Thrust Rep Range for Glute Growth",
+      body: "8-12 reps is the sweet spot most lifters use for hip thrust, since the exercise responds well to volume and the lockout position is easy to hold under control at moderate loads. Lower reps (3-5) work for testing a true hip thrust 1 rep max, but the exercise's short range of motion makes very heavy singles less common as a regular training practice than on squats or deadlifts.",
+    },
+    averageSection: {
+      title: "Average Hip Thrust Weight by Bodyweight",
+      body: "Average hip thrust weight tends to run higher relative to bodyweight than almost any other lower-body exercise — the short range and strong leverage let most lifters move more weight here than on squat or deadlift, so don't be surprised if your hip thrust outpaces both.",
+    },
     faqs: [
       {
         q: "How much should I hip thrust?",
@@ -152,7 +160,7 @@ const exercises = [
     equipment: "Barbell",
     titleHook: "Find Your True Strength Level",
     intro:
-      "Conventional deadlift, bar on the floor, pulled from a dead stop. It's usually the heaviest number in anyone's lifting log because it recruits nearly everything at once — but that also means fatigue and technique breakdown hit harder here than on any other lift.",
+      "This deadlift calculator works as a deadlift max calculator and a deadlift max rep calculator in one — enter any working set and it estimates your true 1RM. Conventional deadlift, bar on the floor, pulled from a dead stop, is usually the heaviest number in anyone's lifting log because it recruits your hip hinge, grip strength, hamstrings, glutes, and lower back nearly all at once — which also means fatigue and technique breakdown hit harder here than on any other barbell lift.",
     muscles: "Hamstrings, glutes, and the entire back working together, with grip strength often becoming the real limiter as weight climbs.",
     formNote:
       "Bar should stay close to your shins and thighs the whole way up. The moment it drifts forward, the leverage against your lower back gets ugly fast — that's usually where form breaks down before weight does.",
@@ -169,7 +177,23 @@ const exercises = [
       body: "Conventional deadlift is the harder pull of the two for most lifters — a more forward torso lean and a longer effective range put more direct demand on your lower back and hip hinge than trap bar's more centered, upright setup does.",
       guideline: "If you're deadlifting conventional and curious what trap bar might feel like, expect the number to move up somewhat for most lifters, not down — the leverage genuinely is more forgiving.",
     },
+    repRangeGuidance: {
+      title: "Deadlift Rep Ranges: Testing vs. Training",
+      body: "Testing your true max means singles and doubles at or near your limit — that's what this deadlift max calculator estimates from. For building strength week to week, 3-6 working reps at a real but sub-maximal weight is the more sustainable range. Higher reps (8+) work fine for general conditioning, but they're a different training goal, not a max-strength test.",
+    },
+    averageSection: {
+      title: "Average Deadlift Weight by Bodyweight",
+      body: "Across the general lifting population, most untrained adults deadlift well under their own bodyweight on a first honest attempt. A year or so of consistent training tends to land people around bodyweight to 1.25x bodyweight — meaningfully below the 'advanced' tier most people picture when they think of a strong deadlift.",
+    },
     faqs: [
+      {
+        q: "How does a deadlift max calculator actually work?",
+        a: "It takes a real set you can already do — weight and reps — and estimates the heaviest single you could likely lift using the Epley formula, the same math used across every calculator on this site. It's an estimate from real data, not a guess.",
+      },
+      {
+        q: "What's the average trap bar deadlift weight?",
+        a: "Similar to conventional deadlift but usually somewhat higher for the same lifter, thanks to the more forgiving leverage — see the Trap Bar Deadlift calculator for standards built specifically around that lift.",
+      },
       {
         q: "How much should I deadlift?",
         a: "Bodyweight is a fair starting marker. Most consistent lifters land near 1.5x within a couple years. 2x-plus starts looking genuinely strong to most people watching.",
@@ -856,7 +880,7 @@ const exercises = [
     equipment: "Barbell / Dumbbell",
     titleHook: "Is Your Overhead Press Strong?",
     intro:
-      "Shoulder press — also called overhead press — means pressing weight straight overhead, either standing or seated, with a barbell or dumbbells. It's one of the clearest tests of raw shoulder and triceps strength there is, and unlike bench press, there's no bench or leg drive to help you cheat the number.",
+      "This calculator estimates your shoulder press weights from a real working set, straight overhead, either standing or seated, with a barbell or dumbbells. Shoulder press — also called overhead press — is one of the clearest tests of raw shoulder and triceps strength there is, and unlike bench press, there's no bench or leg drive to help you cheat the number.",
     muscles: "Front and side delts do most of the work, with triceps finishing the lockout and your core and upper back stabilizing the weight overhead.",
     formNote:
       "Standing overhead press asks a lot of your core to keep the weight from pulling you backward — if you're arching hard through your lower back to get the bar up, the weight is ahead of what your strict form can handle yet.",
@@ -873,6 +897,14 @@ const exercises = [
       { name: "Seated dumbbell shoulder press", note: "A common gym default — controlled, less core demand than standing." },
       { name: "Push press", note: "Uses leg drive to help launch the weight — a different, more explosive movement." },
     ],
+    repRangeGuidance: {
+      title: "Shoulder Press: How Many Reps Should I Do?",
+      body: "3-5 reps at a heavy weight is the range for testing or building raw pressing strength. 8-12 reps works better for shoulder size and general upper-body volume. Because shoulder press is a harder lift to load heavy safely than bench press, most lifters get more consistent long-term progress training in the 5-8 rep range rather than chasing low-rep maxes often.",
+    },
+    averageSection: {
+      title: "Average Shoulder Press for Men and Women",
+      body: "Average shoulder press for men without dedicated training is typically well under bodyweight — this is a harder lift to build relative strength on than bench press, since there's no bench or leg drive helping the number along. For women, the same pattern holds at roughly 60% of the men's benchmarks shown in the table below.",
+    },
     faqs: [
       {
         q: "How much should I shoulder press?",
@@ -917,7 +949,7 @@ const exercises = [
     equipment: "Bodyweight / Weighted",
     titleHook: "How Many Should You Really Do?",
     intro:
-      "Pull-up, palms facing away, is one of the purest tests of relative upper-body strength — no machine, no adjustable resistance, just your bodyweight (and any extra weight you add) against gravity. This calculator is built around weighted pull-ups: enter the added weight beyond your bodyweight, not your total bodyweight.",
+      "This pull-up calculator works as a weighted pull-up calculator — enter the extra weight you added beyond your bodyweight, and it estimates your max weighted pull up against real pull-up standards. Pull-up, palms facing away, is one of the purest tests of relative upper-body strength: no machine, no adjustable resistance, just your pull up weight (bodyweight plus anything you've added) against gravity and your own grip strength.",
     muscles: "Lats do most of the pulling, with biceps, rear delts, and grip strength all playing a real supporting role.",
     formNote:
       "A full rep means a true dead hang at the bottom and your chin clearing the bar at the top — partial-range pull-ups inflate the number but don't reflect the same strength standard.",
@@ -941,7 +973,23 @@ const exercises = [
       body: "Lat pulldown and pull-up train the same movement pattern, but pulldown lets you go lighter than your bodyweight while pull-up doesn't — you're always moving your full bodyweight at minimum. That's why a lot of people can pull down more on the stack than they can technically lift bodyweight on a bar: the pulldown never asked them to handle their own weight in the first place.",
       guideline: "As a rough guide, if you can lat pulldown around 100% of your bodyweight for a controlled set of 8, you're in the range where a first strict bodyweight pull-up becomes realistic with focused training.",
     },
+    repRangeGuidance: {
+      title: "Pull-Up Rep Range: Strength vs. Volume",
+      body: "For pure strength, train weighted pull-ups in the 3-5 rep range with real added load — this is where a max weighted pull up calculator earns its keep, since you're testing close to your ceiling. For muscle growth and pulling volume, 8-12 reps at bodyweight or a lighter added weight builds more total work capacity. If you're still chasing your first strict rep, a 1-5 rep range on assisted or negative pull-ups is the right training zone.",
+    },
+    averageSection: {
+      title: "Average Pull-Up Numbers by Experience",
+      body: "Most untrained adults can't complete a single strict pull-up — grip and relative bodyweight strength are the limiting factors early on. Once someone's trained pulling movements for 6-12 months, 5-8 strict bodyweight reps is a realistic marker. Add external weight — the actual pull-up standards this calculator is built around — and anything past 25% of your bodyweight for a clean rep puts you well ahead of the average gym-goer.",
+    },
     faqs: [
+      {
+        q: "Can I trust a max weighted pull up calculator?",
+        a: "Any calculator using the Epley formula, like this one, gives a reasonable estimate from a real working set. The key is entering added weight only, not your total bodyweight — that's what separates a real pull up weight calculator from a bodyweight rep counter.",
+      },
+      {
+        q: "What's a realistic pull up rep range for a beginner?",
+        a: "1-5 strict reps, even with assistance from a band or machine, is a completely normal starting range. Chasing high-rep pull-ups before you have a clean single tends to build bad habits — like kipping or partial range — that are harder to undo later.",
+      },
       {
         q: "How much weight should I add to pull-ups?",
         a: "If 8-10 strict bodyweight reps feel comfortable, 10-15% of your bodyweight is a reasonable starting add. Test a real weighted set above once you have one.",
@@ -1086,7 +1134,7 @@ const exercises = [
     equipment: "Machine",
     titleHook: "Are You Pulling Your Weight?",
     intro:
-      "Lat pulldown is the seated cable machine version of a pull-up — same pulling pattern, but you're pulling the bar down to you instead of pulling your bodyweight up. It's the standard entry point for building pulling strength before attempting real pull-ups, and it stays useful even for lifters who can already do weighted pull-ups.",
+      "This lat pulldown calculator estimates your lat pulldown 1 rep max from a real working set on the cable stack. Lat pulldown is the seated cable machine version of a pull-up — same pulling pattern, but you're pulling a cable-loaded bar down to you instead of hauling your own bodyweight up. Because gyms load their weight stacks differently, the right weight for lat pulldown varies more by machine than almost any other lift — exactly why a personal calculator beats a flat lat pulldown weight stack chart.",
     muscles: "Lats are the primary target, with biceps, rear delts, and mid-back assisting through the pull.",
     formNote:
       "Lean back only slightly, and pull with your elbows driving down and back rather than just curling the bar toward your face — this is the most common way people turn a lat exercise into an arm exercise without meaning to.",
@@ -1110,7 +1158,19 @@ const exercises = [
       body: "Pulldown and pull-up train the same muscles through the same pattern, but pull-up has a hard floor: your full bodyweight, every rep, no way to go lighter. That's the whole reason pulldown exists as a stepping stone — it lets you build the same strength without that floor.",
       guideline: "If your lat pulldown is still well under your own bodyweight for a clean set of 8, that's a fair sign a strict pull-up isn't quite there yet — keep building the pulldown number up first.",
     },
+    repRangeGuidance: {
+      title: "Lat Pulldown Rep Range for Back Strength",
+      body: "6-8 reps at a heavier weight builds real pulling strength and transfers best toward pull-up progress. 10-15 reps at a lighter weight on the stack is better once strength isn't the limiting factor and you're training for back volume and muscle growth instead.",
+    },
+    averageSection: {
+      title: "Lat Pulldown Weight Stack Chart, by Bodyweight",
+      body: "The table below works as a lat pulldown weight stack chart — a plain-language reference for what beginner through elite roughly looks like at a given bodyweight. Treat it as a starting compass, not gospel: two gyms' weight stacks can disagree by 10-20% even at the 'same' number on the pin.",
+    },
     faqs: [
+      {
+        q: "What's a good lat pulldown 1 rep max?",
+        a: "Bodyweight on the stack for a clean single is a fair intermediate marker for lat pulldown 1 rep max — though since stack calibration varies by machine, treat this as a rough guide rather than a hard target.",
+      },
       {
         q: "How much should I lat pulldown?",
         a: "Bodyweight on the stack for a clean set of 8-10 is a solid intermediate marker. Machine calibration varies enough between gyms that flat benchmarks aren't that reliable.",
